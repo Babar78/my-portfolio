@@ -5,6 +5,9 @@ import HeroSectionText from "../../components/heroSectionText/HeroSectionText";
 import CustomButton from "../../components/customButton/CustomButton";
 import SocialMediaSidebar from "../../components/socialMediaSidebar/SocialMediaSidebar";
 
+import CVPDF from "../../assets/cvPDF/Muhammad_Babar_CV.pdf"
+
+
 function heroSection() {
   return (
     <section className={`heroSection `}>
@@ -18,7 +21,7 @@ function heroSection() {
           <Navbar />
           <div className="absolute top-[40%] left-0 px-[20px]">
             <HeroSectionText />
-            <CustomButton label={`Download My CV`} icon={"download"}/>
+            <CustomButton label={`Download My CV`} icon={"download"} downloadPdf={true} pdfFile={CVPDF}/>
           </div>
           <SocialMediaSidebar />
         </div>
