@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/navbar/Navbar";
 
 function heroSection() {
   return (
-    <div >
-    
-    </div>
-  )
+    <section className={`heroSection`}>
+      <div className={`content_container`}>
+        <Navbar />
+      </div>
+    </section>
+  );
 }
 
-export default heroSection
+export default heroSection;
