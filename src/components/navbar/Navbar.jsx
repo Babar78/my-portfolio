@@ -34,7 +34,7 @@ function Navbar() {
               <div className="flex flex-1 items-center justify-center xl:items-stretch xl:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="md:h-16 xl:h-12 h-10 w-auto"
+                    className="md:h-16 sm:h-14 h-12 w-auto"
                     src={logo}
                     alt="Bartistry Logo"
                   />
@@ -42,7 +42,7 @@ function Navbar() {
               </div>
               <div className="hidden xl:ml-6 xl:block">
                 <div className="flex space-x-2">
-                  <NavButton label="Home" active="true" />
+                  <NavButton label="Dashboard" active="true" />
                   <NavButton label="About Me" active="false" />
                   <NavButton label="Skills" active="false" />
                   <NavButton label="Work Experience" active="false" />
@@ -57,7 +57,7 @@ function Navbar() {
 
           <Disclosure.Panel className="xl:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              <NavButton label="Home" active="true" />
+              <NavButton label="Dashboard" active="true" />
               <NavButton label="About Me" active="false" />
               <NavButton label="Skills" active="false" />
               <NavButton label="Work Experience" active="false" />
