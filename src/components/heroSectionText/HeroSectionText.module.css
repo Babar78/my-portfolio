@@ -79,10 +79,6 @@
 
   @media (max-width: 480px) {
     .title {
-      .headingSpan {
-        right: auto;
-        left: 150px;
-      }
       .heading {
         font-size: 32px !important;
       }
