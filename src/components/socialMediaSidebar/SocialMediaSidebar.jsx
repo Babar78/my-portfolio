@@ -13,18 +13,18 @@ function SocialMediaSidebar() {
         <a
           href="https://www.linkedin.com/in/mbabarashraf/"
           target="_blank"
-          rel="LinkedIn Icon"
+          rel="noreferrer"
         >
           <ImLinkedin className={`w-[25px] h-[25px] hover:text-[#b91813]`} />
         </a>
         <a
           href="https://www.behance.net/muhammad_babar"
           target="_blank"
-          rel="Behance Icon"
+          rel="noreferrer"
         >
           <FaBehanceSquare className={`w-[25px] h-[25px] hover:text-[#b91813]`} />
         </a>
-        <a href="https://github.com/Babar78" target="_blank" rel="Github Icon">
+        <a href="https://github.com/Babar78" target="_blank" rel="noreferrer">
           <FaGithubSquare className={`w-[25px] h-[25px] hover:text-[#b91813]`} />
         </a>
       </div>

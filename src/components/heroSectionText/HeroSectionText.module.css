@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-right: 20px !important;
 
   .title {
     width: 100%;
@@ -55,14 +56,53 @@
     }
   }
 
+
+  @media (max-width: 768px) {
+    .title {
+      .heading {
+        font-size: 42px !important;
+      }
+    }
+    .role {
+      .para {
+        font-size: 10px !important;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .title {
+      .heading {
+        font-size: 36px !important;
+      }
+    }
+  }
+
   @media (max-width: 480px) {
     .title {
       .headingSpan {
         right: auto;
         left: 150px;
       }
+      .heading {
+        font-size: 32px !important;
+      }
+    }
+    .role {
+      .para {
+        font-size: 08px !important;
+      }
     }
   }
+  @media (max-width: 349px) {
+    .title {
+      .headingSpan {
+        right: auto;
+        left: 100px;
+      }
+    }
+    
+  }
+
 
   .role {
     width: 100%;

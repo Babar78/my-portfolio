@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
 import bgPic from "../../assets/images/heroPic.png";
 import HeroSectionText from "../../components/heroSectionText/HeroSectionText";
 import CustomButton from "../../components/customButton/CustomButton";
@@ -8,9 +7,9 @@ import SocialMediaSidebar from "../../components/socialMediaSidebar/SocialMediaS
 import CVPDF from "../../assets/cvPDF/Muhammad_Babar_CV.pdf"
 
 
-function heroSection() {
+function HeroSection() {
   return (
-    <section className={`heroSection `}>
+    <section className={`heroSection`}>
       <div className="main_container">
         <div className={`content_container relative`} style={{
           backgroundImage: `url(${bgPic})`,
@@ -18,7 +17,7 @@ function heroSection() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}>
-          <Navbar />
+          
           <div className="absolute top-[40%] left-0 px-[20px]">
             <HeroSectionText />
             <CustomButton label={`Download My CV`} icon={"download"} downloadPdf={true} pdfFile={CVPDF}/>
@@ -30,4 +29,4 @@ function heroSection() {
   );
 }
 
-export default heroSection;
+export default HeroSection;

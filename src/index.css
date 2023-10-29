@@ -17,8 +17,9 @@
 body {
   background-color: black;
   color: white;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 h1 {
   font-size: 36px;
@@ -279,6 +280,12 @@ p {
 .fz-32 {
   font-size: 32px;
 }
+.fz-48 {
+  font-size: 48px;
+}
+.fz-64 {
+  font-size: 64px;
+}
 @media (max-width: 767px) {
   .fz-8 {
     font-size: 8px;
@@ -312,6 +319,12 @@ p {
   }
   .fz-32 {
     font-size: 30px;
+  }
+  .fz-48 {
+    font-size: 42px;
+  }
+  .fz-64 {
+    font-size: 54px;
   }
 }
 @media (max-width: 576px) {
@@ -348,7 +361,44 @@ p {
   .fz-32 {
     font-size: 26px;
   }
+  .fz-48 {
+    font-size: 36px;
+  }
+  .fz-64 {
+    font-size: 42px;
+  }
 }
+@media (max-width: 400px) {
+  .fz-16 {
+    font-size: 12px;
+  }
+  .fz-18 {
+    font-size: 14px;
+  }
+  .fz-20 {
+    font-size: 16px;
+  }
+  .fz-24 {
+    font-size: 18px;
+  }
+  .fz-28 {
+    font-size: 20px;
+  }
+  .fz-30 {
+    font-size: 22px;
+  }
+  .fz-32 {
+    font-size: 24px;
+  }
+  .fz-48 {
+    font-size: 32px;
+  }
+  .fz-64 {
+    font-size: 36px;
+  }
+}
+
+
 
 a {
   text-decoration: none;

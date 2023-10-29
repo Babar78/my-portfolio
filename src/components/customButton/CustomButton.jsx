@@ -8,6 +8,7 @@ function CustomButton({ label, icon, downloadPdf, pdfFile }) {
       href={pdfFile}
       download="Muhammad-Babar-CV"
       target="_blank"
+      rel="noreferrer"
       className="btn bg-[#b91813] text-white transition ease-in delay-150 duration-75 hover:text-black inline-flex items-center p-4 text-base"
     >
       {icon === "download" ? (
