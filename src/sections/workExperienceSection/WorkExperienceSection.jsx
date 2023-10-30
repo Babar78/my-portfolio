@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
-import ExperienceCard from "../../components/experienceCard/ExperienceCard";
-import ExperienceCarousel from "../../components/experienceCarousel/ExperienceCarousel";
+import React from "react";
 
 const workExperience = [
   {
@@ -52,53 +49,6 @@ const workExperience = [
 ];
 
 function WorkExperienceSection() {
-  let cards = [
-    {
-      key: uuidv4(),
-      content: <ExperienceCard {...workExperience[0]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ExperienceCard {...workExperience[1]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ExperienceCard {...workExperience[2]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ExperienceCard {...workExperience[3]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ExperienceCard {...workExperience[4]} />,
-    },
-  ];
-
-  // State to store the offset value of Carousel so that the cards are centered on smaller screens also
-  const [offset, setOffset] = useState(200); // Default offset value
-
-  useEffect(() => {
-    // Function to update the offset based on screen width
-    const updateOffset = () => {
-      const screenWidth = window.innerWidth;
-      if (screenWidth < 576) {
-        setOffset(1); // Set offset to 1 if the screen width is less than 576px
-      } else {
-        setOffset(200); // Set the default offset value if the screen width is 576px or more
-      }
-    };
-
-    // Initial update
-    updateOffset();
-    // Add a resize event listener to update the offset on window resize
-    window.addEventListener("resize", updateOffset);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", updateOffset);
-    };
-  }, []); // Run this effect only once when the component mounts
 
   return (
     <section className="workExperienceSection">
@@ -106,14 +56,7 @@ function WorkExperienceSection() {
         <h1 className="fz-64 text-[#b91813] text-center">Work Experience</h1>
         <div className="content_container">
           <div className="pt-[50px]">
-            <ExperienceCarousel
-              cards={cards}
-              height="500px"
-              width="100%"
-              margin="auto"
-              offset={offset}
-              showArrows={true}
-            />
+
           </div>
         </div>
       </div>

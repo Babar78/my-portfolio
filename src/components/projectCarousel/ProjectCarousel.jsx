@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-spring-3d-carousel';
 import { config } from 'react-spring';
 
-function ExperienceCarousel(props) {
+function ProjectCarousel(props) {
   const table = props.cards.map((element, index) => {
     return { ...element, onClick: () => setGoToSlide(index) };
   });
@@ -18,7 +18,7 @@ function ExperienceCarousel(props) {
   }, [props.offset, props.showArrows]);
 
   // Autoplay configuration
-  const [autoplayInterval, setAutoplayInterval] = useState(3000); // Adjust the autoplay interval as needed
+  const [autoplayInterval, setAutoplayInterval] = useState(5000); // Adjust the autoplay interval as needed
 
   useEffect(() => {
     // Start autoplay when the component mounts
@@ -49,4 +49,4 @@ function ExperienceCarousel(props) {
   );
 }
 
-export default ExperienceCarousel;
+export default ProjectCarousel;
