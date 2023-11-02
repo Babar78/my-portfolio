@@ -24,7 +24,7 @@ function ServicesCard({title, description, image, ctaText}) {
         <img src={image} alt="" className="w-100 h-100" />
       </div>
       <div className="border border-[1px] border-[#B91813] grow rounded-bl-[50px] border-t-0 relative">
-        <h2 className="text-center -mt-5">{title}</h2>
+        <h2 className="text-center -mt-5 shadow-lg">{title}</h2>
         <p className="fz-16 px-[35px] py-[20px]">
           {description}
         </p>

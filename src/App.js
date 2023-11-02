@@ -6,6 +6,7 @@ import SkillsSection from "./sections/skillsSection/SkillsSection";
 import WorkExperienceSection from "./sections/workExperienceSection/WorkExperienceSection";
 import PersonalProjects from "./sections/personalProjects/PersonalProjects";
 import ServicesSection from "./sections/servicesSection/ServicesSection";
+import TestimonialSection from "./sections/testimonialSection/TestimonialSection";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <WorkExperienceSection />
       <PersonalProjects />
       <ServicesSection />
+      <TestimonialSection />
     </div>
   );
 }

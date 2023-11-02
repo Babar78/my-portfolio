@@ -231,19 +231,19 @@ p {
 
 @media (max-width: 992px) {
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 576px) {
   p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -416,31 +416,26 @@ a {
 }
 
 /* Service Cards */
-
 @media (min-width: 992px) {
   #servicesCard h2{
     margin-top: -1.25rem !important;
   }
 }
-
 @media (max-width: 992px) {
   #servicesCard h2{
     margin-top: -1.2rem !important;
   }
 }
-
 @media (max-width: 768px) {
   #servicesCard h2{
     margin-top: -1rem !important;
   }
 }
-
 @media (max-width: 576px) {
   #servicesCard h2{
     margin-top: -0.8rem !important;
   }
 }
-
 @media (max-width: 350px) {
   #servicesCard h2{
     margin-top: -0.7rem !important;
@@ -451,3 +446,47 @@ a {
   }
 }
 
+
+
+/* Testimonial Section */
+
+@media (max-width: 768px) {
+  .testimonialCard{
+    height: 250px !important;
+  }
+  .testimonialCard .position{
+    font-size: 12px !important;
+  }
+  .testimonialCard .userImage{
+    height: 70px !important;
+    width: 70px !important;
+    top: -2rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .testimonialCard p{
+    font-size: 14px !important;
+  }
+  .testimonialCard .position{
+    font-size: 10px !important;
+  }
+  .testimonialCard{
+    height: 230px !important;
+  }
+  .testimonialCard .userImage{
+    height: 60px !important;
+    width: 60px !important;
+    top: -1.8rem !important;
+  }
+}
+@media (max-width: 350px) {
+  
+  .testimonialCard p{
+    font-size: 12px !important;
+  }
+  .testimonialCard .userImage{
+    height: 50px !important;
+    width: 50px !important;
+    top: -1.5rem !important;
+  }
+}

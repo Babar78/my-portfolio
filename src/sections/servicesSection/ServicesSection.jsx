@@ -54,7 +54,7 @@ function ServicesSection() {
         title={service.title}
         description={service.description}
         image={service.image}
-        ctaText="Learn More"
+        ctaText="Get Service"
       />
     ),
   }));
