@@ -5,7 +5,10 @@ import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 import logo from "../../assets/images/logo/logo-Large.png";
 import NavButton from "../navButton/NavButton";
 
-function Navbar() {
+import { Link, scroller } from "react-scroll";
+
+function Navbar(props) {
+  // Change navbar background color on scroll
   const [bgColor, setBgColor] = useState("bg-transparent");
 
   useEffect(() => {
@@ -26,6 +29,28 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Scroll to Respective Section on Navbar Button Click
+  // Function to scroll to a section
+  const scrollToSection = (sectionName) => {
+    scroller.scrollTo(sectionName, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+
+  // Change bgColor of Active Button
+  const [activeButton, setActiveButton] = useState("Dashboard");
+
+  const changeActiveButton = (buttonName) => {
+    setActiveButton(buttonName);
+  };
+
+  // Change active button to Scroll when goToTop button is clicked
+  useEffect(() => {
+    setActiveButton("Dashboard");
+  }, [props.dashboardActive]);
 
   return (
     <Disclosure
@@ -66,14 +91,139 @@ function Navbar() {
               </div>
               <div className="hidden xl:ml-6 xl:block">
                 <div className="flex space-x-2">
-                  <NavButton label="Dashboard" active="true" />
-                  <NavButton label="About Me" active="false" />
-                  <NavButton label="Skills" active="false" />
-                  <NavButton label="Work Experience" active="false" />
-                  <NavButton label="Projects" active="false" />
-                  <NavButton label="Services" active="false" />
-                  <NavButton label="Testimonials" active="false" />
-                  <NavButton label="Contact" active="false" />
+                  <Link
+                    to="dashboard"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("dashboard");
+                      changeActiveButton("Dashboard");
+                    }}
+                  >
+                    <NavButton
+                      label="Dashboard"
+                      active={activeButton === "Dashboard" ? "true" : "false"}
+                    />
+                  </Link>
+                  <Link
+                    to="aboutme"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("aboutme");
+                      changeActiveButton("About Me");
+                    }}
+                  >
+                    <NavButton
+                      label="About Me"
+                      active={activeButton === "About Me" ? "true" : "false"}
+                    />
+                  </Link>
+
+                  <Link
+                    to="skills"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("skills");
+                      changeActiveButton("Skills");
+                    }}
+                  >
+                    <NavButton
+                      label="Skills"
+                      active={activeButton === "Skills" ? "true" : "false"}
+                    />
+                  </Link>
+                  <Link
+                    to="workExperience"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("workExperience");
+                      changeActiveButton("Work Experience");
+                    }}
+                  >
+                    <NavButton
+                      label="Work Experience"
+                      active={
+                        activeButton === "Work Experience" ? "true" : "false"
+                      }
+                    />
+                  </Link>
+
+                  <Link
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("projects");
+                      changeActiveButton("Projects");
+                    }}
+                  >
+                    <NavButton
+                      label="Projects"
+                      active={activeButton === "Projects" ? "true" : "false"}
+                    />
+                  </Link>
+
+                  <Link
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("services");
+                      changeActiveButton("Services");
+                    }}
+                  >
+                    <NavButton
+                      label="Services"
+                      active={activeButton === "Services" ? "true" : "false"}
+                    />
+                  </Link>
+
+                  <Link
+                    to="testimonials"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("testimonials");
+                      changeActiveButton("Testimonials");
+                    }}
+                  >
+                    <NavButton
+                      label="Testimonials"
+                      active={
+                        activeButton === "Testimonials" ? "true" : "false"
+                      }
+                    />
+                  </Link>
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={800}
+                    onClick={() => {
+                      scrollToSection("contact");
+                      changeActiveButton("Contact");
+                    }}
+                  >
+                    <NavButton label="Contact" active="false" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -81,14 +231,135 @@ function Navbar() {
 
           <Disclosure.Panel className="xl:hidden bg-gradient-to-tr from-[#000000] to-[#212121ce]">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              <NavButton label="Dashboard" active="true" />
-              <NavButton label="About Me" active="false" />
-              <NavButton label="Skills" active="false" />
-              <NavButton label="Work Experience" active="false" />
-              <NavButton label="Projects" active="false" />
-              <NavButton label="Services" active="false" />
-              <NavButton label="Testimonials" active="false" />
-              <NavButton label="Contact" active="false" />
+              <Link
+                to="dashboard"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("dashboard");
+                  changeActiveButton("Dashboard");
+                }}
+              >
+                <NavButton
+                  label="Dashboard"
+                  active={activeButton === "Dashboard" ? "true" : "false"}
+                />
+              </Link>
+              <Link
+                to="aboutme"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("aboutme");
+                  changeActiveButton("About Me");
+                }}
+              >
+                <NavButton
+                  label="About Me"
+                  active={activeButton === "About Me" ? "true" : "false"}
+                />
+              </Link>
+
+              <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("skills");
+                  changeActiveButton("Skills");
+                }}
+              >
+                <NavButton
+                  label="Skills"
+                  active={activeButton === "Skills" ? "true" : "false"}
+                />
+              </Link>
+              <Link
+                to="workExperience"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("workExperience");
+                  changeActiveButton("Work Experience");
+                }}
+              >
+                <NavButton
+                  label="Work Experience"
+                  active={activeButton === "Work Experience" ? "true" : "false"}
+                />
+              </Link>
+
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("projects");
+                  changeActiveButton("Projects");
+                }}
+              >
+                <NavButton
+                  label="Projects"
+                  active={activeButton === "Projects" ? "true" : "false"}
+                />
+              </Link>
+
+              <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("services");
+                  changeActiveButton("Services");
+                }}
+              >
+                <NavButton
+                  label="Services"
+                  active={activeButton === "Services" ? "true" : "false"}
+                />
+              </Link>
+
+              <Link
+                to="testimonials"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("testimonials");
+                  changeActiveButton("Testimonials");
+                }}
+              >
+                <NavButton
+                  label="Testimonials"
+                  active={activeButton === "Testimonials" ? "true" : "false"}
+                />
+              </Link>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={800}
+                onClick={() => {
+                  scrollToSection("contact");
+                  changeActiveButton("Contact");
+                }}
+              >
+                <NavButton label="Contact" active="false" />
+              </Link>
             </div>
           </Disclosure.Panel>
         </>

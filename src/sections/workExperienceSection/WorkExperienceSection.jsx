@@ -1,5 +1,8 @@
 import React from "react";
 
+// To Scroll to this Element on NavbarButton Click
+import { Element } from "react-scroll";
+
 const workExperience = [
   {
     id: 1,
@@ -49,18 +52,17 @@ const workExperience = [
 ];
 
 function WorkExperienceSection() {
-
   return (
-    <section className="workExperienceSection">
-      <div className="main_container py-[100px]">
-        <h1 className="fz-64 text-[#b91813] text-center">Work Experience</h1>
-        <div className="content_container">
-          <div className="pt-[50px]">
-
+    <Element name="workExperience">
+      <section className="workExperienceSection">
+        <div className="main_container py-[100px]">
+          <h1 className="fz-64 text-[#b91813] text-center">Work Experience</h1>
+          <div className="content_container">
+            <div className="pt-[50px]"></div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Element>
   );
 }
 

@@ -1,12 +1,14 @@
 import React from "react";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
-function TakeToTopButton() {
+function TakeToTopButton({dashboardActive, setDashboardActive}) {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+    // Change the active button to "Dashboard"
+    setDashboardActive(!dashboardActive);
   };
 
   return (

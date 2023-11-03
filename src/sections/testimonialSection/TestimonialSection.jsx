@@ -6,6 +6,9 @@ import Carousel from "../../components/swiperJS/SwiperJS";
 import testimonialPic1 from "../../assets/images/testimonials/ahmed.png";
 import testimonialPic2 from "../../assets/images/testimonials/anas.png";
 
+// To Scroll to this Element on NavbarButton Click
+import { Element } from "react-scroll";
+
 const testimonials = [
   {
     id: 1,
@@ -80,7 +83,8 @@ function TestimonialSection() {
   }, []); // Run this effect only once when the component mounts
 
   return (
-    <section className="testimonialSection">
+    <Element name="testimonials">
+      <section className="testimonialSection">
       <div className="main_container py-[100px]">
         <div className="content_container">
           <h1 className="fz-64 text-center text-[#b91813]">Testimonials</h1>
@@ -95,6 +99,7 @@ function TestimonialSection() {
         </div>
       </div>
     </section>
+    </Element>
   );
 }
 

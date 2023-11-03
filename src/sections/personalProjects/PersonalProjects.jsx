@@ -13,6 +13,9 @@ import projectLogo6 from "../../assets/images/personalProjects/concierge.svg";
 import projectLogo7 from "../../assets/images/personalProjects/jalwal.svg";
 import projectLogo8 from "../../assets/images/personalProjects/chitral_steel.png";
 
+// To Scroll to this Element on NavbarButton Click
+import { Element } from "react-scroll";
+
 const personalProjects = [
   {
     id: 1,
@@ -175,7 +178,8 @@ function PersonalProjects() {
     };
   }, []); // Run this effect only once when the component mounts
   return (
-    <section className="persnalProjects">
+    <Element name="projects">
+      <section className="persnalProjects">
       <div className="main_container py-[100px]">
         <h1 className="fz-64 text-[#b91813] text-center">Personal Projects</h1>
         <div className="content_container">
@@ -192,6 +196,7 @@ function PersonalProjects() {
         </div>
       </div>
     </section>
+    </Element>
   );
 }
 

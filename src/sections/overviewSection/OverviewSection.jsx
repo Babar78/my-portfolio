@@ -4,9 +4,13 @@ import OverviewStats from "../../components/overviewStats/OverviewStats";
 
 import CVPDF from "../../assets/cvPDF/Muhammad_Babar_CV.pdf";
 
+// To Scroll to this Element on NavbarButton Click
+import { Element } from "react-scroll";
+
 function OverviewSection() {
   return (
-    <section className="overviewSection">
+    <Element name="aboutme">
+      <section className="overviewSection">
       <div className="overview_outer_container">
         <div className="overview_content_container sm:h-[100dvh] max-w-[1440px] px-[20px] m-auto relative">
           <p className="text-[#b91813] fz-32 uppercase pt-[100px]">
@@ -40,6 +44,7 @@ function OverviewSection() {
         </div>
       </div>
     </section>
+    </Element>
   );
 }
 

@@ -34,10 +34,15 @@ function App() {
     };
   }, []);
 
+
+  const [dashboardActive, setDashboardActive] = useState(false);
+
   return (
     <div className="App">
-      {showTakeToTopButton && <TakeToTopButton />}
-      <Navbar />
+      {showTakeToTopButton && (
+        <TakeToTopButton dashboardActive={dashboardActive} setDashboardActive={setDashboardActive}/>
+      )}
+      <Navbar dashboardActive={dashboardActive} />
       <HeroSection />
       <OverviewSection />
       <SkillsSection />

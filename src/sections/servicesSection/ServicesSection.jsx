@@ -6,6 +6,9 @@ import serviceImage1 from "../../assets/images/services/webDev.png";
 import serviceImage2 from "../../assets/images/services/ui.png";
 import serviceImage3 from "../../assets/images/services/graphicDesign.png";
 
+// To Scroll to this Element on NavbarButton Click
+import { Element } from "react-scroll";
+
 const services = [
   {
     id: 1,
@@ -59,7 +62,7 @@ function ServicesSection() {
     ),
   }));
 
-  //   Use States to save how many items to show on screen w.r.t screen size
+  //  States to save how many items to show on screen w.r.t screen size
 
   const [slidesPerView, setSlidesPerView] = useState(3); // Default slides per view value
   const [spaceBetween, setSpaceBetween] = useState(30); // Default space between slides value
@@ -85,7 +88,7 @@ function ServicesSection() {
 
     // Initial update
     updateVariables();
-    // Add a resize event listener to update the offset on window resize
+    // A resize event listener to update the offset on window resize
     window.addEventListener("resize", updateVariables);
 
     // Clean up the event listener when the component unmounts
@@ -95,7 +98,8 @@ function ServicesSection() {
   }, []); // Run this effect only once when the component mounts
 
   return (
-    <section className="servicesSection">
+    <Element name="services">
+      <section className="servicesSection">
       <div className="main_container py-[100px]">
         <div className="content_container">
           <h1 className="fz-64 text-[#b91813] text-center">Services</h1>
@@ -107,6 +111,7 @@ function ServicesSection() {
         </div>
       </div>
     </section>
+    </Element>
   );
 }
 
