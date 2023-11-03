@@ -53,7 +53,7 @@ function ContactUsSection() {
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
-                <div className="flex gap-2 items-center mt-5">
+                {/* <div className="flex gap-2 items-center mt-5">
                   <LocationOnRoundedIcon className="dark:text-gray-500" />
                   <p className="dark:text-gray-500 p-0 m-0 fz-14">
                     JXVR+25F, Indus Loop, H-12, Islamabad, Islamabad Capital
@@ -65,9 +65,9 @@ function ContactUsSection() {
                   <p className="dark:text-gray-500 p-0 m-0 fz-14">
                     muhammadbabarashraf8@gmail.com
                   </p>
-                </div>
+                </div> */}
               </div>
-              <div className="follow-Div">
+              {/* <div className="follow-Div">
                 <h4 className="mb-4">Follow Me!</h4>
                 <div className="flex gap-8">
                   <a
@@ -105,7 +105,7 @@ function ContactUsSection() {
                     </svg>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

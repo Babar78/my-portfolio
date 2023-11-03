@@ -408,6 +408,11 @@ a {
   height: 100dvh;
 }
 
+.main_container_two {
+  width: 100vw;
+  height: 100%;
+}
+
 .content_container {
   max-width: 1440px;
   margin: 0 auto;
@@ -417,27 +422,27 @@ a {
 
 /* Service Cards */
 @media (min-width: 992px) {
-  #servicesCard h2{
+  #servicesCard h2 {
     margin-top: -1.25rem !important;
   }
 }
 @media (max-width: 992px) {
-  #servicesCard h2{
+  #servicesCard h2 {
     margin-top: -1.2rem !important;
   }
 }
 @media (max-width: 768px) {
-  #servicesCard h2{
+  #servicesCard h2 {
     margin-top: -1rem !important;
   }
 }
 @media (max-width: 576px) {
-  #servicesCard h2{
+  #servicesCard h2 {
     margin-top: -0.8rem !important;
   }
 }
 @media (max-width: 350px) {
-  #servicesCard h2{
+  #servicesCard h2 {
     margin-top: -0.7rem !important;
   }
   #servicesCard {
@@ -446,80 +451,162 @@ a {
   }
 }
 
-
-
 /* Testimonial Section */
 
 @media (max-width: 768px) {
-  .testimonialCard{
+  .testimonialCard {
     height: 250px !important;
   }
-  .testimonialCard .position{
+  .testimonialCard .position {
     font-size: 12px !important;
   }
-  .testimonialCard .userImage{
+  .testimonialCard .userImage {
     height: 70px !important;
     width: 70px !important;
     top: -2rem !important;
   }
 }
 @media (max-width: 576px) {
-  .testimonialCard p{
+  .testimonialCard p {
     font-size: 14px !important;
   }
-  .testimonialCard .position{
+  .testimonialCard .position {
     font-size: 10px !important;
   }
-  .testimonialCard{
+  .testimonialCard {
     height: 230px !important;
   }
-  .testimonialCard .userImage{
+  .testimonialCard .userImage {
     height: 60px !important;
     width: 60px !important;
     top: -1.8rem !important;
   }
 }
 @media (max-width: 350px) {
-  
-  .testimonialCard p{
+  .testimonialCard p {
     font-size: 12px !important;
   }
-  .testimonialCard .userImage{
+  .testimonialCard .userImage {
     height: 50px !important;
     width: 50px !important;
     top: -1.5rem !important;
   }
 }
 
-
 /* Contact Us Section */
 
-@media (max-width: 1330px){
-  .formDiv{
+@media (max-width: 1330px) {
+  .formDiv {
     width: 500px !important;
   }
-  iframe{
+  iframe {
     width: 500px !important;
     height: 400px;
   }
 }
 
-@media (max-width: 1170px){
-  .formDiv{
-    max-width: 500px !important;
+@media (max-width: 1170px) {
+  .formDiv {
+    width: 500px !important;
   }
-  .infoDiv{
+  .infoDiv {
     display: none;
   }
 }
-@media (max-width: 576px){
-  .formDiv{
+@media (max-width: 768px) {
+  .formDiv {
+    width: 100% !important;
+    padding: 2rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .formDiv {
     padding: 2rem !important;
   }
 }
 
-@media (max-width: 400px){
-  .formDiv{
+@media (max-width: 400px) {
+  .formDiv {
     padding: 1.5rem !important;
   }
 }
+
+/* Footer Section */
+
+@media (max-width: 1350px) {
+  .ctaContainer .ctaDiv {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .ctaContainer .ctaDiv {
+    width: 75% !important;
+    flex-direction: column !important;
+    padding: 2.5rem !important;
+  }
+  .ctaContainer .ctaDiv p {
+    width: 100% !important;
+  }
+
+  .footer_content {
+    padding-top: 150px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaContainer .ctaDiv {
+    width: 90% !important;
+  }
+
+  .ctaContainer .ctaDiv h2 {
+    font-size: 28px !important;
+  }
+  .ctaContainer .ctaDiv p {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .ctaContainer .ctaDiv h2 {
+    font-size: 26px !important;
+  }
+  .ctaContainer .ctaDiv p {
+    font-size: 14px !important;
+  }
+  .footer_content a{
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .footer_content a svg{
+    height:  1em !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .ctaContainer .ctaDiv {
+    padding: 1.8rem !important;
+  }
+  .ctaContainer .ctaDiv h2 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+  .ctaContainer .ctaDiv p {
+    font-size: 12px !important;
+  }
+  .ctaContainer .ctaDiv button{
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .footer_content a{
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .footer_content a svg{
+    height:  0.8em !important;
+  }
+}
+
+
