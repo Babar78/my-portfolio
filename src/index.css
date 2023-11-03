@@ -574,13 +574,13 @@ a {
   .ctaContainer .ctaDiv p {
     font-size: 14px !important;
   }
-  .footer_content a{
+  .footer_content a {
     width: 40px !important;
     height: 40px !important;
   }
 
-  .footer_content a svg{
-    height:  1em !important;
+  .footer_content a svg {
+    height: 1em !important;
   }
 
   .social-handles-div {
@@ -599,18 +599,63 @@ a {
   .ctaContainer .ctaDiv p {
     font-size: 12px !important;
   }
-  .ctaContainer .ctaDiv button{
+  .ctaContainer .ctaDiv button {
     width: 130px;
     height: 40px;
     font-size: 14px;
   }
-  .footer_content a{
+  .footer_content a {
     width: 35px !important;
     height: 35px !important;
   }
-  .footer_content a svg{
-    height:  0.8em !important;
+  .footer_content a svg {
+    height: 0.8em !important;
   }
 }
 
+/* Take to Top Button */
 
+@media (max-width: 992px) {
+  .takeToTopButton {
+    width: 50px !important;
+    height: 50px !important;
+    right: 2rem !important;
+    bottom: 2rem !important;
+  }
+  .takeToTopButton .topIcon {
+    font-size: 1.5rem !important;
+  }
+  .takeToTopButton p{
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .takeToTopButton {
+    width: 40px !important;
+    height: 40px !important;
+    right: 1.5rem !important;
+    bottom: 1.5rem !important;
+  }
+  .takeToTopButton .topIcon {
+    font-size: 1.2rem !important;
+  }
+  .takeToTopButton p{
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .takeToTopButton {
+    width: 30px !important;
+    height: 30px !important;
+    right: 0.5rem !important;
+    bottom: 0.5rem !important;
+  }
+  .takeToTopButton .topIcon {
+    font-size: 1rem !important;
+  }
+  .takeToTopButton p{
+    font-size: 08px !important;
+  }
+}
