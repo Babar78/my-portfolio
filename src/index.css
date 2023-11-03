@@ -490,3 +490,36 @@ a {
     top: -1.5rem !important;
   }
 }
+
+
+/* Contact Us Section */
+
+@media (max-width: 1330px){
+  .formDiv{
+    width: 500px !important;
+  }
+  iframe{
+    width: 500px !important;
+    height: 400px;
+  }
+}
+
+@media (max-width: 1170px){
+  .formDiv{
+    max-width: 500px !important;
+  }
+  .infoDiv{
+    display: none;
+  }
+}
+@media (max-width: 576px){
+  .formDiv{
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 400px){
+  .formDiv{
+    padding: 1.5rem !important;
+  }
+}
