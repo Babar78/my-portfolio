@@ -582,6 +582,10 @@ a {
   .footer_content a svg{
     height:  1em !important;
   }
+
+  .social-handles-div {
+    gap: 1rem !important;
+  }
 }
 
 @media (max-width: 375px) {
