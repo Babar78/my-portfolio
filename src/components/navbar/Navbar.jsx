@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import SubjectRoundedIcon from "@mui/icons-material/SubjectRounded";
 import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
@@ -6,14 +6,38 @@ import logo from "../../assets/images/logo/logo-Large.png";
 import NavButton from "../navButton/NavButton";
 
 function Navbar() {
+  const [bgColor, setBgColor] = useState("bg-transparent");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const threshold = 300;
+
+      if (scrollPosition > threshold) {
+        setBgColor("bg-gradient-to-tr from-[#000000] to-[#212121bf]");
+      } else {
+        setBgColor("bg-transparent");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Disclosure as="nav" className="bg-transparent py-4 fixed top-0 z-[10] w-full">
+    <Disclosure
+      as="nav"
+      className={`${bgColor} py-4 fixed top-0 z-[10] w-full`}
+    >
       {({ open }) => (
         <>
           <div className="mx-auto content_container ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center xl:hidden">
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#19191b] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -55,7 +79,7 @@ function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="xl:hidden">
+          <Disclosure.Panel className="xl:hidden bg-gradient-to-tr from-[#000000] to-[#212121ce]">
             <div className="space-y-1 px-2 pb-3 pt-2">
               <NavButton label="Dashboard" active="true" />
               <NavButton label="About Me" active="false" />

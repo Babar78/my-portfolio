@@ -6,8 +6,8 @@ function NavButton({ label, active }) {
       className={`text-white rounded-md py-2 xl:px-5 px-3 xl:w-fit w-full xl:text-center text-left
     ${
       active === "true"
-        ? "bg-gray-700"
-        : "border-none bg-transparent hover:bg-gray-700"
+        ? "bg-[#19191b]"
+        : "border-none bg-transparent hover:bg-[#19191b]"
     }
     `}
     >
