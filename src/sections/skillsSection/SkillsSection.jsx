@@ -8,7 +8,7 @@ import { Element } from "react-scroll";
 
 function SkillsSection() {
   return (
-    <Element name="skills">
+    <Element name="skills" id="Skills">
       <section className="skillsSection">
         <div
           className="outer_container md:py-[100px] py-[50px]"

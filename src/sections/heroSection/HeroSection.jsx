@@ -11,8 +11,8 @@ import { Element } from "react-scroll";
 
 function HeroSection() {
   return (
-    <Element name="dashboard">
-      <section className={`heroSection`}>
+    <Element name="dashboard" id="Dashboard">
+      <section className={`heroSection`} >
         <div className="main_container">
           <div
             className={`content_container relative`}

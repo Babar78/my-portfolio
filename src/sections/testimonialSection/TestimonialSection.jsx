@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import TestimonialCard from "../../components/testimonialCard/TestimonialCard";
 
 import Carousel from "../../components/swiperJS/SwiperJS";
@@ -35,7 +35,6 @@ const testimonials = [
       "An exceptional graphic designing experience! They transformed our vision into captivating visuals. Thrilled with our new logo design!",
   },
 ];
-
 
 function TestimonialSection() {
   const slideItems = testimonials.map((testimonial) => ({
@@ -83,22 +82,24 @@ function TestimonialSection() {
   }, []); // Run this effect only once when the component mounts
 
   return (
-    <Element name="testimonials">
+    <Element name="testimonials" id="Testimonials">
       <section className="testimonialSection">
-      <div className="main_container py-[100px]">
-        <div className="content_container">
-          <h1 className="fz-64 text-center text-[#b91813]">Testimonials</h1>
-          <div className="h-full sm:py-[100px] py-[75px]">
-          <p className="fz-24 text-[#A6A6A6] lg:text-left text-center">What Clients Say:</p>
-          <Carousel
-            slideItems={slideItems}
-            slidesPerView={slidesPerView}
-            spaceBetween={spaceBetween}
-          />
+        <div className="main_container py-[100px]">
+          <div className="content_container">
+            <h1 className="fz-64 text-center text-[#b91813]">Testimonials</h1>
+            <div className="h-full sm:py-[100px] py-[75px]">
+              <p className="fz-24 text-[#A6A6A6] lg:text-left text-center">
+                What Clients Say:
+              </p>
+              <Carousel
+                slideItems={slideItems}
+                slidesPerView={slidesPerView}
+                spaceBetween={spaceBetween}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </Element>
   );
 }

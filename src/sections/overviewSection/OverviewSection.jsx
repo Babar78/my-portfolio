@@ -9,8 +9,8 @@ import { Element } from "react-scroll";
 
 function OverviewSection() {
   return (
-    <Element name="aboutme">
-      <section className="overviewSection">
+    <Element name="aboutme" id="About Me">
+      <section className="overviewSection" >
       <div className="overview_outer_container">
         <div className="overview_content_container sm:h-[100dvh] max-w-[1440px] px-[20px] m-auto relative">
           <p className="text-[#b91813] fz-32 uppercase pt-[100px]">

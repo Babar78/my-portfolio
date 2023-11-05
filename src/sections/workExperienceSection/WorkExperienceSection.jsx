@@ -53,7 +53,7 @@ const workExperience = [
 
 function WorkExperienceSection() {
   return (
-    <Element name="workExperience">
+    <Element name="workExperience" id="Work Experience">
       <section className="workExperienceSection">
         <div className="main_container py-[100px]">
           <h1 className="fz-64 text-[#b91813] text-center">Work Experience</h1>

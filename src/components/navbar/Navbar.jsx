@@ -52,6 +52,42 @@ function Navbar(props) {
     setActiveButton("Dashboard");
   }, [props.dashboardActive]);
 
+  // Change active button with Scrolling the website
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100; // 100px offset
+
+      // Determine the active section based on the scroll position
+      const sections = [
+        "Dashboard",
+        "About Me",
+        "Skills",
+        "Work Experience",
+        "Projects",
+        "Services",
+        "Testimonials",
+        "Contact",
+      ];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const sectionTop = element.offsetTop;
+          const sectionBottom = sectionTop + element.clientHeight - 500; // 500px offset from bottom of section so that about half of section is scrolled to change active button (when scrolling upwards)
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            setActiveButton(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Disclosure
       as="nav"
@@ -222,7 +258,10 @@ function Navbar(props) {
                       changeActiveButton("Contact");
                     }}
                   >
-                    <NavButton label="Contact" active="false" />
+                    <NavButton
+                      label="Contact"
+                      active={activeButton === "Contact" ? "true" : "false"}
+                    />
                   </Link>
                 </div>
               </div>
@@ -358,7 +397,10 @@ function Navbar(props) {
                   changeActiveButton("Contact");
                 }}
               >
-                <NavButton label="Contact" active="false" />
+                <NavButton
+                  label="Contact"
+                  active={activeButton === "Contact" ? "true" : "false"}
+                />
               </Link>
             </div>
           </Disclosure.Panel>

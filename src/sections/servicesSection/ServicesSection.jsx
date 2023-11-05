@@ -98,19 +98,19 @@ function ServicesSection() {
   }, []); // Run this effect only once when the component mounts
 
   return (
-    <Element name="services">
+    <Element name="services" id="Services">
       <section className="servicesSection">
-      <div className="main_container py-[100px]">
-        <div className="content_container">
-          <h1 className="fz-64 text-[#b91813] text-center">Services</h1>
-          <Carousel
-            slideItems={slideItems}
-            slidesPerView={slidesPerView}
-            spaceBetween={spaceBetween}
-          />
+        <div className="main_container py-[100px]">
+          <div className="content_container">
+            <h1 className="fz-64 text-[#b91813] text-center">Services</h1>
+            <Carousel
+              slideItems={slideItems}
+              slidesPerView={slidesPerView}
+              spaceBetween={spaceBetween}
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </Element>
   );
 }

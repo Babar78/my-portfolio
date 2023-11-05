@@ -5,10 +5,9 @@ import CustomTextArea from "../../components/customTextArea/CustomTextArea";
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";
 
-
 function ContactUsSection() {
   return (
-    <Element name="contact">
+    <Element name="contact" id="Contact">
       <section className="contactUsSection">
         <div className="py-[100px]">
           <div className="content_container">

@@ -178,7 +178,7 @@ function PersonalProjects() {
     };
   }, []); // Run this effect only once when the component mounts
   return (
-    <Element name="projects">
+    <Element name="projects" id="Projects">
       <section className="persnalProjects">
       <div className="main_container py-[100px]">
         <h1 className="fz-64 text-[#b91813] text-center">Personal Projects</h1>
