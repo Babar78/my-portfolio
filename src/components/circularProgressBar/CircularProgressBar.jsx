@@ -90,7 +90,7 @@ function CircularProgressBar({ label, percentage }) {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
-    const duration = 1000; // Total duration in milliseconds
+    const duration = 1500; // Total duration in milliseconds
 
     const steps = percentage; // Number of steps to reach the percentage
     const increment = duration / steps;
