@@ -12,17 +12,17 @@ import { Element } from "react-scroll";
 function HeroSection() {
   return (
     <Element name="dashboard" id="Dashboard">
-      <section className={`heroSection`} >
-        <div className="main_container">
-          <div
-            className={`content_container relative`}
-            style={{
-              backgroundImage: `url(${bgPic})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
+      <section className={`heroSection`}>
+        <div
+          className="main_container heroSection_container"
+          style={{
+            backgroundImage: `url(${bgPic})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className={`content_container relative`}>
             <div className="absolute top-[40%] left-0 px-[20px]">
               <HeroSectionText />
               <CustomButton

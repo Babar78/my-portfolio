@@ -420,6 +420,13 @@ a {
   height: 100%;
 }
 
+/* Hero Section */
+@media (max-width: 992px) {
+  .heroSection_container {
+    background-position: calc(100% + 100px) !important;
+  }
+}
+
 /* Service Cards */
 @media (min-width: 992px) {
   #servicesCard h2 {
@@ -625,7 +632,7 @@ a {
   .takeToTopButton .topIcon {
     font-size: 1.5rem !important;
   }
-  .takeToTopButton p{
+  .takeToTopButton p {
     font-size: 14px !important;
   }
 }
@@ -640,7 +647,7 @@ a {
   .takeToTopButton .topIcon {
     font-size: 1.2rem !important;
   }
-  .takeToTopButton p{
+  .takeToTopButton p {
     font-size: 10px !important;
   }
 }
@@ -655,7 +662,16 @@ a {
   .takeToTopButton .topIcon {
     font-size: 1rem !important;
   }
-  .takeToTopButton p{
+  .takeToTopButton p {
     font-size: 08px !important;
   }
+}
+
+/* Project Carousel Navigation Arrows */
+.css-1qzevvg {
+  width: fit-content !important;
+  gap: 5rem !important;
+}
+.css-1qzevvg img {
+  cursor: pointer;
 }
