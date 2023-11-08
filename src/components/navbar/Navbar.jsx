@@ -74,7 +74,7 @@ function Navbar(props) {
           const sectionTop = element.offsetTop;
           const sectionBottom = sectionTop + element.clientHeight - 500; // 500px offset from bottom of section so that about half of section is scrolled to change active button (when scrolling upwards)
           if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-            setActiveButton(section);
+            changeActiveButton(section);
             break;
           }
         }
