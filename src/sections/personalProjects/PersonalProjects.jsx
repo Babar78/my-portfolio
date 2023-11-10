@@ -180,7 +180,7 @@ function PersonalProjects() {
   return (
     <Element name="projects" id="Projects">
       <section className="persnalProjects">
-      <div className="main_container py-[100px]">
+      <div className="main_container md:py-[100px] py-[50px]">
         <h1 className="fz-64 text-[#b91813] text-center">Personal Projects</h1>
         <div className="content_container">
           <div className="pt-[50px]">

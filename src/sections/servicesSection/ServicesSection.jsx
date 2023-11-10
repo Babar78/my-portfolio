@@ -100,7 +100,7 @@ function ServicesSection() {
   return (
     <Element name="services" id="Services">
       <section className="servicesSection">
-        <div className="main_container py-[100px]">
+        <div className="main_container md:py-[100px] py-[50px]">
           <div className="content_container">
             <h1 className="fz-64 text-[#b91813] text-center">Services</h1>
             <Carousel
