@@ -1,11 +1,92 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import CustomInput from "../../components/customInput/CustomInput";
 import CustomTextArea from "../../components/customTextArea/CustomTextArea";
 
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";
 
+// Send Email Functionality
+import emailjs from "@emailjs/browser";
+
+// Import BackDrop
+import BackDrop from "../../components/backDrop/BackDrop";
+
+// Form Submitted Successfully Snackbar
+import SnackBar from "../../components/snackBar/SnackBar";
+
 function ContactUsSection() {
+  // Show BackDrop on Form Submission
+  const [showBackDrop, setShowBackDrop] = useState(false);
+
+  // Show SnackBar on Form Submission
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // Snackbar state
+  const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+
+  // Open Snackbar
+  const openSnackbar = () => {
+    setSnackbarOpen(true);
+  };
+
+  // Close Snackbar
+  const closeSnackbar = () => {
+    setSnackbarOpen(false);
+  };
+
+  // use State to store the form data
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+
+  // Function to update the form data
+  const updateFormData = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Send Email Functionality
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Show BackDrop
+    setShowBackDrop(true);
+
+    emailjs
+      .sendForm(
+        "bartistry_contactUs_form",
+        "contactUs_template",
+        form.current,
+        "uL8SYgTiJR2LFJ1mz"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+
+          // Stop Showing BackDrop
+          setShowBackDrop(false);
+
+          // Show SnackBar
+          openSnackbar();
+
+          // Clear the form data after successful submission
+          setFormData({
+            user_name: "",
+            user_email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <Element name="contact" id="Contact">
       <section className="contactUsSection">
@@ -15,20 +96,29 @@ function ContactUsSection() {
               <div className="p-10 w-[600px] bg-gradient-to-tl from-[#1e1e1e] to-black rounded-[10px] formDiv">
                 <p className="uppercase fz-28 text-[#b91813]">get in touch</p>
                 <h2 className="fz-48 text-white mb-10">Contact Us!</h2>
-                <form action="#">
+                <form ref={form} onSubmit={sendEmail}>
                   <CustomInput
                     label={"Your Name:"}
+                    name={"user_name"}
                     type={"text"}
                     placeholder={"Enter Your Name"}
+                    value={formData.user_name}
+                    onChange={updateFormData}
                   />
                   <CustomInput
                     label={"Your Email:"}
+                    name={"user_email"}
                     type={"email"}
                     placeholder={"Enter Your Email"}
+                    value={formData.user_email}
+                    onChange={updateFormData}
                   />
                   <CustomTextArea
                     label={"Your Message:"}
+                    name={"message"}
                     placeholder={"Type Your Message Here!"}
+                    value={formData.message}
+                    onChange={updateFormData}
                   />
                   <button
                     type="submit"
@@ -57,6 +147,9 @@ function ContactUsSection() {
             </div>
           </div>
         </div>
+        <BackDrop state={showBackDrop} />
+
+        <SnackBar open={snackbarOpen} onClose={closeSnackbar} />
       </section>
     </Element>
   );

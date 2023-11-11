@@ -66,10 +66,10 @@ function ExperienceTimeline({
           </div>
         </div>
         <div
-          className={`h-[20px] bg-[#b91813] rounded-full absolute bottom-0  ${
-            position === "center" && "left-0 bottom-0 w-full"
-          } ${position === "bottom-left" && "left-0 top-[5px] w-[50px]"} ${
-            position === "top-center" && "left-[55%] bottom-[25px] w-[100px]"
+          className={`h-[20px] rounded-full absolute bottom-0  ${
+            position === "center" && "left-0 bottom-0 w-full bg-gray-700"
+          } ${position === "bottom-left" && "left-0 top-[5px] w-[50px] bg-gray-600"} ${
+            position === "top-center" && "left-[55%] bottom-[25px] w-[100px] bg-slate-500"
           }`}
         ></div>
       </div>

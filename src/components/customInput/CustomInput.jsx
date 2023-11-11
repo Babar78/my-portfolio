@@ -2,7 +2,7 @@ import React from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
 
-function CustomInput({ label, type, placeholder }) {
+function CustomInput({ label, name, type, placeholder, value, onChange }) {
   const [isFocused, setIsFocused] = React.useState(false);
 
   const handleFocus = () => {
@@ -12,10 +12,11 @@ function CustomInput({ label, type, placeholder }) {
   const handleBlur = () => {
     setIsFocused(false);
   };
+
   return (
     <>
       <label
-        for="input-group-1"
+        htmlFor="input-group-1"
         class="block mb-2 text-sm font-medium text-white"
       >
         {label}
@@ -38,9 +39,12 @@ function CustomInput({ label, type, placeholder }) {
         </div>
         <input
           type={type}
-          id="input-group-1"
+          id={`input-${name}`}
+          name={name}
+          value={value}
           class="bg-[#d9d9d91a] border-b-[1px] border-b-white text-white text-sm rounded-[5px] focus:border-b-[#b91813] focus:ring-0 focus:outline-none block w-full h-[50px] pl-12 p-2.5"
           placeholder={placeholder}
+          onChange={onChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
           required

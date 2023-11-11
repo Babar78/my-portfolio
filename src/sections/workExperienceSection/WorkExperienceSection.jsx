@@ -93,6 +93,7 @@ function WorkExperienceSection() {
                     company={item.company}
                     location={item.location}
                     workStatus={item.workStatus}
+                    jobDescription={item.jobDescription}
                     date={item.date}
                     position={item.position}
                   />
@@ -109,6 +110,7 @@ function WorkExperienceSection() {
                     company={item.company}
                     location={item.location}
                     workStatus={item.workStatus}
+                    jobDescription={item.jobDescription}
                     date={item.date}
                     position={item.position}
                   />
