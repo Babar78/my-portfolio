@@ -1,6 +1,6 @@
 import React from 'react'
 import { ImLinkedin } from "react-icons/im";
-import { FaBehanceSquare, FaGithubSquare } from "react-icons/fa";
+import { FaBehanceSquare, FaDribbbleSquare } from "react-icons/fa";
 
 function SocialMediaSidebar() {
   return (
@@ -24,8 +24,8 @@ function SocialMediaSidebar() {
         >
           <FaBehanceSquare className={`w-[25px] h-[25px] hover:text-[#b91813]`} />
         </a>
-        <a href="https://github.com/Babar78" target="_blank" rel="noreferrer">
-          <FaGithubSquare className={`w-[25px] h-[25px] hover:text-[#b91813]`} />
+        <a href="https://dribbble.com/Babar_Ashraf" target="_blank" rel="noreferrer">
+          <FaDribbbleSquare className={`w-[25px] h-[25px] hover:text-[#b91813]`} />
         </a>
       </div>
     </div>
