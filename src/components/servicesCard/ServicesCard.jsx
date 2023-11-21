@@ -1,7 +1,8 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
+import { Link } from "react-scroll";
 
-function ServicesCard({title, description, image, ctaText}) {
+function ServicesCard({ title, description, image, ctaText }) {
   const [show, setShown] = React.useState(false);
 
   const props3 = useSpring({
@@ -25,12 +26,17 @@ function ServicesCard({title, description, image, ctaText}) {
       </div>
       <div className="border border-[1px] border-[#B91813] grow rounded-bl-[50px] border-t-0 relative">
         <h2 className="text-center -mt-5 shadow-lg">{title}</h2>
-        <p className="fz-16 px-[35px] py-[20px]">
-          {description}
-        </p>
-        <button className="btn fz-16 text-[#b91813] absolute right-[35px] bottom-[35px] underline hover:text-white">
+        <p className="fz-16 px-[35px] py-[20px]">{description}</p>
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={800}
+          className="btn fz-16 text-[#b91813] absolute right-[35px] bottom-[35px] underline hover:text-white cursor-pointer"
+        >
           {ctaText}
-        </button>
+        </Link>
       </div>
     </animated.div>
   );

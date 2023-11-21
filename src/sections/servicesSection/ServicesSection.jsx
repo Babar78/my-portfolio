@@ -30,21 +30,7 @@ const services = [
     description:
       "Graphics design expert, creating captivating visuals that leave a lasting impression. Elevate your brand with my impactful solutions.",
     image: serviceImage3,
-  },
-  {
-    id: 4,
-    title: "Graphic Design",
-    description:
-      "Graphics design expert, creating captivating visuals that leave a lasting impression. Elevate your brand with my impactful solutions.",
-    image: serviceImage3,
-  },
-  {
-    id: 5,
-    title: "Graphic Design",
-    description:
-      "Graphics design expert, creating captivating visuals that leave a lasting impression. Elevate your brand with my impactful solutions.",
-    image: serviceImage3,
-  },
+  }
 ];
 
 function ServicesSection() {

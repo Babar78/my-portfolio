@@ -131,7 +131,7 @@ function Navbar(props) {
                     to="dashboard"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("dashboard");
@@ -147,7 +147,7 @@ function Navbar(props) {
                     to="aboutme"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("aboutme");
@@ -164,7 +164,7 @@ function Navbar(props) {
                     to="skills"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("skills");
@@ -180,7 +180,7 @@ function Navbar(props) {
                     to="workExperience"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("workExperience");
@@ -199,7 +199,7 @@ function Navbar(props) {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("projects");
@@ -216,7 +216,7 @@ function Navbar(props) {
                     to="services"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("services");
@@ -233,7 +233,7 @@ function Navbar(props) {
                     to="testimonials"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("testimonials");
@@ -251,7 +251,7 @@ function Navbar(props) {
                     to="contact"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={800}
                     onClick={() => {
                       scrollToSection("contact");
@@ -274,7 +274,7 @@ function Navbar(props) {
                 to="dashboard"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("dashboard");
@@ -290,7 +290,7 @@ function Navbar(props) {
                 to="aboutme"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("aboutme");
@@ -307,7 +307,7 @@ function Navbar(props) {
                 to="skills"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("skills");
@@ -323,7 +323,7 @@ function Navbar(props) {
                 to="workExperience"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("workExperience");
@@ -340,7 +340,7 @@ function Navbar(props) {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("projects");
@@ -357,7 +357,7 @@ function Navbar(props) {
                 to="services"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("services");
@@ -374,7 +374,7 @@ function Navbar(props) {
                 to="testimonials"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("testimonials");
@@ -390,7 +390,7 @@ function Navbar(props) {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-50}
                 duration={800}
                 onClick={() => {
                   scrollToSection("contact");
