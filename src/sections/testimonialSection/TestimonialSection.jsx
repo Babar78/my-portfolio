@@ -3,8 +3,9 @@ import TestimonialCard from "../../components/testimonialCard/TestimonialCard";
 
 import Carousel from "../../components/swiperJS/SwiperJS";
 
-import testimonialPic1 from "../../assets/images/testimonials/ahmed.png";
-import testimonialPic2 from "../../assets/images/testimonials/anas.png";
+import BasharatZaman from "../../assets/images/testimonials/BasharatZaman.jpeg";
+import Rameen from "../../assets/images/testimonials/girl-icon.png";
+import Hamza from "../../assets/images/testimonials/boy-icon.png"
 
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";
@@ -12,27 +13,27 @@ import { Element } from "react-scroll";
 const testimonials = [
   {
     id: 1,
-    name: "Ahmed Usman",
-    position: "CEO & Founder: Takhleeq Studio",
-    image: testimonialPic1,
+    name: "Basharat Zaman",
+    position: "VP Product: Bilty",
+    image: BasharatZaman,
     description:
-      "Stellar website development services! Their expertise and attention to detail exceeded expectations. Highly recommended!",
+      "Babar effectively concluded the Frontend Developer Internship at Bilty, demonstrating exceptional proficiency in tasks assigned. Bilty extends gratitude for the his commendable efforts, acknowledging their significant contributions.",
   },
   {
     id: 2,
-    name: "Anas",
-    position: "CEO: Dev Junction",
-    image: testimonialPic2,
+    name: "Rameen Awais",
+    position: "Country Head: Total School Solutions",
+    image: Rameen,
     description:
-      "An exceptional graphic designing experience! They transformed our vision into captivating visuals. Thrilled with our new logo design!",
+      "As a Senior Graphic Designer at Total School Solutions from Nov 2022 to Jun 2023, he consistently delivered high-quality and visually appealing designs.",
   },
   {
     id: 3,
-    name: "Anas",
-    position: "CEO: Dev Junction",
-    image: testimonialPic2,
+    name: "Hamza Naseer",
+    position: "",
+    image: Hamza,
     description:
-      "An exceptional graphic designing experience! They transformed our vision into captivating visuals. Thrilled with our new logo design!",
+      "Very professional and quick work! He did exactly what we needed and transformed our vision into captivating visuals. Thrilled with our new logo design!",
   },
 ];
 
@@ -88,9 +89,6 @@ function TestimonialSection() {
           <div className="content_container">
             <h1 className="fz-64 text-center text-[#b91813]">Testimonials</h1>
             <div className="h-full sm:py-[100px] py-[75px]">
-              <p className="fz-24 text-[#A6A6A6] lg:text-left text-center">
-                What Clients Say:
-              </p>
               <Carousel
                 slideItems={slideItems}
                 slidesPerView={slidesPerView}
