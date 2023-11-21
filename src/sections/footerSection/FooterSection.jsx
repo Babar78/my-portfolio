@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-scroll";
 import logo from "../../assets/images/logo/logo-small-white.png";
 
 function FooterSection() {
@@ -13,9 +13,16 @@ function FooterSection() {
               <p className="w-[30%] text-center">
                 Interested in working together? We should queue up a chat.
               </p>
-              <button className=" bg-white text-[#b91813] w-[150px] h-[50px] flex justify-center items-center rounded-full">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={800}
+                className=" bg-white text-[#b91813] w-[150px] h-[50px] flex justify-center items-center rounded-full cursor-pointer"
+              >
                 Let's do this
-              </button>
+              </Link>
             </div>
           </div>
 
