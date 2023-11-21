@@ -33,74 +33,67 @@ function SkillsSection() {
         >
           <div className="content_container">
             <h1 className="fz-64 text-center text-[#b91813]">Skills</h1>
-            {isInView && (
-              <div className="grid sm:grid-cols-3 gap-10 sm:px-4 py-10">
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"HTML"} percentage={90} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"MongoDB"} percentage={65} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"UI/UX Design"} percentage={70} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"CSS"} percentage={65} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"Express JS"} percentage={25} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar
-                    label={"Adobe Illustrator"}
-                    percentage={95}
-                  />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"Javascript"} percentage={95} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"React Js"} percentage={90} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar
-                    label={"Adobe Photoshop"}
-                    percentage={80}
-                  />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"Tailwind"} percentage={95} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"Node Js"} percentage={45} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar
-                    label={"Adobe After Effects"}
-                    percentage={50}
-                  />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"Bootstrap"} percentage={95} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar label={"Wordpress"} percentage={50} />
-                </div>
-                <div className="basis-1/3">
-                  <LinearProgressBar
-                    label={"Adobe Premier Pro"}
-                    percentage={50}
-                  />
-                </div>
+            <div className="grid sm:grid-cols-3 gap-10 sm:px-4 py-10">
+              <div className="basis-1/3">
+                <LinearProgressBar label={"HTML"} percentage={90} startLoading={isInView}/>
               </div>
-            )}
-            {isInView && (
-              <div className="grid grid-cols-3 gap-10 py-5 sm:px-4">
-                <CircularProgressBar label={"Urdu"} percentage={100} />
-                <CircularProgressBar label={"English"} percentage={70} />
-                <CircularProgressBar label={"German"} percentage={20} />
+              <div className="basis-1/3">
+                <LinearProgressBar label={"MongoDB"} percentage={65} startLoading={isInView}/>
               </div>
-            )}
+              <div className="basis-1/3">
+                <LinearProgressBar label={"UI/UX Design"} percentage={70} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"CSS"} percentage={65} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"Express JS"} percentage={25} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar
+                  label={"Adobe Illustrator"}
+                  percentage={95}
+                startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"Javascript"} percentage={95} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"React Js"} percentage={90} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"Adobe Photoshop"} percentage={80} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"Tailwind"} percentage={95} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"Node Js"} percentage={45} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar
+                  label={"Adobe After Effects"}
+                  percentage={50}
+                startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"Bootstrap"} percentage={95} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar label={"Wordpress"} percentage={50} startLoading={isInView}/>
+              </div>
+              <div className="basis-1/3">
+                <LinearProgressBar
+                  label={"Adobe Premier Pro"}
+                  percentage={50}
+                startLoading={isInView}/>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-10 py-5 sm:px-4">
+              <CircularProgressBar label={"Urdu"} percentage={100} startLoading={isInView}/>
+              <CircularProgressBar label={"English"} percentage={70} startLoading={isInView}/>
+              <CircularProgressBar label={"German"} percentage={20} startLoading={isInView}/>
+            </div>
           </div>
         </div>
       </section>

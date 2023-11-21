@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
@@ -24,11 +24,6 @@ function CircularProgressWithLabel(props) {
             "& .MuiCircularProgress-svg": {
               transform: "scale(2.5)", // Adjust the scale factor to reduce bar size
             },
-            "@media (max-width: 576px)": {
-              "& .MuiCircularProgress-svg": {
-                transform: "scale(2)", // Adjust the scale factor to reduce bar size
-              },
-            },
           }}
           size={40} // Adjust the size to control the overall circular bar size
           thickness={2.5}
@@ -50,11 +45,6 @@ function CircularProgressWithLabel(props) {
             "& .MuiCircularProgress-circle": {
               strokeLinecap: "round",
             },
-            "@media (max-width: 576px)": {
-              "& .MuiCircularProgress-svg": {
-                transform: "scale(2)", // Adjust the scale factor to reduce bar size
-              },
-            },
           }}
           thickness={2.5}
         />
@@ -70,11 +60,7 @@ function CircularProgressWithLabel(props) {
           height: "100%",
         }}
       >
-        <Typography
-          variant="h5"
-          component="div"
-          color="white"
-        >
+        <Typography variant="h5" component="div" color="white">
           {`${Math.round(props.value)}%`}
         </Typography>
       </Box>
@@ -86,31 +72,37 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function CircularProgressBar({ label, percentage }) {
-  const [progress, setProgress] = React.useState(0);
+function CircularProgressBar({ label, percentage, startLoading }) {
+  const [progress, setProgress] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    let timer;
+
     const duration = 1500; // Total duration in milliseconds
-
     const steps = percentage; // Number of steps to reach the percentage
     const increment = duration / steps;
 
-    let currentStep = 0;
+    if (startLoading) {
+      let currentStep = 0;
 
-    const timer = setInterval(() => {
-      currentStep++;
-      if (currentStep > steps) {
-        clearInterval(timer); // Stop the timer when progress reaches or exceeds the percentage
-        return;
-      }
-      const newProgress = (currentStep / steps) * percentage;
-      setProgress(newProgress);
-    }, increment);
+      timer = setInterval(() => {
+        currentStep++;
+        if (currentStep > steps) {
+          clearInterval(timer); // Stop the timer when progress reaches or exceeds the percentage
+          return;
+        }
+        const newProgress = (currentStep / steps) * percentage;
+        setProgress(newProgress);
+      }, increment);
+    } else {
+      // Reset the progress when startLoading becomes false
+      setProgress(0);
+    }
 
     return () => {
       clearInterval(timer);
     };
-  }, [percentage]);
+  }, [percentage, startLoading]);
 
   return (
     <div className="flex flex-col items-center">
