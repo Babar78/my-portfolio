@@ -15,11 +15,11 @@ function SwiperJS({ slideItems , slidesPerView, spaceBetween}) {
     <Swiper
       slidesPerView={slidesPerView}
       spaceBetween={spaceBetween}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      loop={true}
+      // autoplay={{
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // }}
+      // loop={true}
       pagination={{
         dynamicBullets: true,
         clickable: true,

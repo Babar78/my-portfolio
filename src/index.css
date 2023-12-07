@@ -675,3 +675,25 @@ a {
 .css-1qzevvg img {
   cursor: pointer;
 }
+
+/* Project Carousel New Cards Toggle Button Responsive */
+@media (max-width: 415px){
+  .projectsCategoryToggleButtonOption{
+    font-size: 10px !important;
+  }
+}
+
+/* Project Carousel New Cards Tech Stack Icons Responsive */
+@media (max-width:1200px){
+  .technologyStackImage{
+    max-height: 50px !important ;
+  }
+}@media (max-width:991px){
+  .technologyStackImage{
+    max-height: 40px !important ;
+  }
+}@media (max-width:768px){
+  .technologyStackImage{
+    max-height: 30px !important ;
+  }
+}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import ProjectCard from "../../components/projectCard/ProjectCard";
-import ProjectCarousel from "../../components/projectCarousel/ProjectCarousel";
+import ProjectCard from "../../components/projectCard2/ProjectCard2";
 
 // Importing Images
 import projectLogo1 from "../../assets/images/personalProjects/ff.svg";
@@ -15,187 +14,142 @@ import projectLogo8 from "../../assets/images/personalProjects/chitral_steel.png
 
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";
+import CustomToggleButton from "../../components/customToggleButton/CustomToggleButton";
+import Carousel from "../../components/swiperJS/SwiperJS";
 
 const personalProjects = [
   {
     id: 1,
-    projectLogo: projectLogo1,
-    projectTitle: "Faisal Movers",
-    company: "Bilty",
-    projectDescription: [
-      "Successfully designed and implemented a responsive single-page website with a modern and intuitive user interface.",
-      "Utilized cutting-edge technologies and creative design to enhance user experience and engagement.",
-      " Achieved seamless integration of multimedia content and dynamic elements for a captivating online presence.",
-    ],
-    date: "Oct 27, 2023",
-  },
-  {
-    id: 2,
-    projectLogo: projectLogo2,
-    projectTitle: "Business Debt Settelments",
-    company: "Bilty",
-    projectDescription: [
-      "Successfully designed and implemented a responsive single-page website with a modern and intuitive user interface.",
-      "Utilized cutting-edge technologies and creative design to enhance user experience and engagement.",
-      " Achieved seamless integration of multimedia content and dynamic elements for a captivating online presence.",
-    ],
-    date: "Oct 05, 2023",
-  },
-  {
-    id: 3,
     projectLogo: projectLogo3,
     projectTitle: "eCart",
+    techStack: ["mongo", "react", "node", "redux", "cloudinary", "bootstrap"],
     company: "Semester Project",
-    projectDescription: [
-      "e-Commerce website where users can explore and buy clothes, shoes etc.",
-      "Front-end using React and Tailwind.",
-      "Back-end using Express Js and Node Js.",
-      "Database used was MongoDB.",
-    ],
+    projectDescription:
+      "eCart is a sleek e-commerce platform offering a curated selection of clothing, shoes, and more. Built with React and Tailwind CSS, the user interface is modern and intuitive. Powered by Express.js and Node.js on the back-end, and utilizing MongoDB for data storage, eCart ensures a secure and efficient shopping experience. Explore and shop seamlessly with eCart - where style meets simplicity.",
     date: "Feb 27, 2023",
   },
   {
-    id: 4,
+    id: 2,
     projectLogo: projectLogo4,
     projectTitle: "Tripify",
+    techStack: ["mongo", "react", "node", "tailwind"],
     company: "Semester Project",
-    projectDescription: [
-      "A tourism website which is a great facility for the tourism enthusiasts.",
-      "Front-end using React and Tailwind.",
-      "Back-end using Express Js and Node Js.",
-      "Database used was MongoDB.",
-    ],
+    projectDescription:
+      "Tripify is a dynamic tourism website designed to cater to the needs of avid travelers. Crafted as a semester project, Tripify seamlessly blends form and function.\n\nThe front-end, developed with React and Tailwind CSS, offers an engaging and user-friendly interface. On the back-end, Express.js and Node.js work in tandem to ensure a robust system. MongoDB serves as the backbone, storing and managing data efficiently. Discover the world with ease using Tripify - where exploration meets innovation.",
     date: "Dec 27, 2023",
+  },
+  {
+    id: 3,
+    projectLogo: projectLogo1,
+    projectTitle: "Faisal Movers",
+    techStack: ["html", "css", "js", "bootstrap"],
+    company: "Bilty",
+    projectDescription:
+      "Faisal Movers, a prominent player in Pakistan's transportation sector, stands as a flagship venture under the esteemed Faisal Group. Renowned for its extensive operations, Faisal Group extends its influence across diverse industries, including fertilizer division, urban and public transportation, logistics, KCS, and fertilization division.\n\nAs the designer of their website, I crafted a platform that not only represents Faisal Movers but also serves as a comprehensive source of information about the entire Faisal Group and its various subsidiaries. The website encapsulates the essence of Faisal Group's multifaceted presence, providing insights into its significant contributions across different sectors.",
+    date: "Oct 27, 2023",
+  },
+  {
+    id: 4,
+    projectLogo: projectLogo2,
+    projectTitle: "Business Debt Settelments",
+    techStack: ["html", "css", "js", "bootstrap"],
+    company: "Bilty",
+    projectDescription:
+      "BDS is a US based company which provides specialized service to assists individuals in navigating and resolving their financial challenges through effective debt settlement strategies. I designed this website during my Internship at Bilty for a US based client.\n\nThe project involved the creation of a responsive website, characterized by a contemporary and user-friendly interface. Employing advanced technologies and innovative design, the platform not only enhances user experience but also serves as a comprehensive resource for individuals seeking professional assistance in managing and settling their debts.",
+    date: "Oct 05, 2023",
   },
   {
     id: 5,
     projectLogo: projectLogo5,
-    projectTitle: "Bilty US",
+    projectTitle: "Bilty Dispatch",
+    techStack: ["html", "css", "js", "bootstrap"],
     company: "Bilty",
-    projectDescription: [
-      "Successfully designed and implemented a responsive single-page website with a modern and intuitive user interface.",
-      "Utilized cutting-edge technologies and creative design to enhance user experience and engagement.",
-      " Achieved seamless integration of multimedia content and dynamic elements for a captivating online presence.",
-    ],
+    projectDescription:
+      "Bilty US, a project executed for Bilty, introduces BILTY Dispatch—a dedicated solution for efficient truck dispatching within the U.S. logistics sector. This endeavor focuses on streamlining dispatch operations, optimizing fleet performance, and providing real-time visibility in the transportation industry.\n\nThe responsive website is a testament to successful design and implementation, featuring a contemporary and intuitive user interface. Leveraging cutting-edge technologies and creative design, the platform not only enhances user experience and engagement but also achieves seamless integration of multimedia content and dynamic elements, creating a captivating online presence for BILTY Dispatch.",
     date: "Sep 30, 2023",
   },
   {
     id: 6,
     projectLogo: projectLogo6,
     projectTitle: "Concierge",
+    techStack: ["html", "css", "js", "bootstrap"],
     company: "Bilty",
-    projectDescription: [
-      "Successfully designed and implemented a responsive single-page website with a modern and intuitive user interface.",
-      "Utilized cutting-edge technologies and creative design to enhance user experience and engagement.",
-      " Achieved seamless integration of multimedia content and dynamic elements for a captivating online presence.",
-    ],
+    projectDescription:
+      "Concierge, a project developed for Bilty, represents a startup endeavor with a vision to provide users with a more convenient solution for ride booking and related services. The project involved the successful design and implementation of a responsive website featuring a modern and intuitive user interface",
     date: "Jul 10, 2023",
   },
   {
     id: 7,
     projectLogo: projectLogo7,
     projectTitle: "Jalwal",
+    techStack: ["html", "css", "js", "bootstrap"],
     company: "Bilty",
-    projectDescription: [
-      "Successfully designed and implemented a responsive single-page website with a modern and intuitive user interface.",
-      "Utilized cutting-edge technologies and creative design to enhance user experience and engagement.",
-      " Achieved seamless integration of multimedia content and dynamic elements for a captivating online presence.",
-    ],
+    projectDescription:
+      "Jalwal, a project undertaken for Bilty, serves as a dynamic online platform for a Pakistan-based recruitment firm. \n\nSpecializing in talent acquisition, Jalwal required a responsive website with a modern and intuitive user interface. The project successfully achieved this goal by leveraging cutting-edge technologies and implementing creative design strategies to enhance user experience and engagement.",
     date: "Aug 09, 2023",
   },
   {
     id: 8,
     projectLogo: projectLogo8,
     projectTitle: "Chitral Steel",
+    techStack: ["html", "css", "js", "bootstrap"],
     company: "Bilty",
-    projectDescription: [
-      "Successfully designed and implemented a responsive single-page website with a modern and intuitive user interface.",
-      "Utilized cutting-edge technologies and creative design to enhance user experience and engagement.",
-      " Achieved seamless integration of multimedia content and dynamic elements for a captivating online presence.",
-    ],
+    projectDescription:
+      "Chitral Steel, a local shop based in Chitral, envisioned a modern online presence to showcase their products and facilitate customer engagement. The project, titled 'Chitral Steel,' involved the successful design and implementation of a responsive single-page website. Leveraging a tech stack comprising HTML, CSS, JavaScript, and Bootstrap, the website achieved a contemporary and intuitive user interface. By employing cutting-edge technologies and creative design strategies, the project enhanced user experience and engagement.",
     date: "Oct 31, 2023",
   },
 ];
 
 function PersonalProjects() {
-  let cards = [
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[0]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[1]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[2]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[3]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[4]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[5]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[6]} />,
-    },
-    {
-      key: uuidv4(),
-      content: <ProjectCard {...personalProjects[7]} />,
-    },
-  ];
+  const slideItems = personalProjects.map((project) => ({
+    id: project.id,
+    content: (
+      <ProjectCard
+        projectLogo={project.projectLogo}
+        projectTitle={project.projectTitle}
+        techStack={project.techStack}
+        company={project.company}
+        projectDescription={project.projectDescription}
+        date={project.date}
+      />
+    ),
+  }));
 
-  // State to store the offset value of Carousel so that the cards are centered on smaller screens also
-  const [offset, setOffset] = useState(200); // Default offset value
+  //   Use States to save how many items to show on screen w.r.t screen size
 
-  useEffect(() => {
-    // Function to update the offset based on screen width
-    const updateOffset = () => {
-      const screenWidth = window.innerWidth;
-      if (screenWidth < 576) {
-        setOffset(1); // Set offset to 1 if the screen width is less than 576px
-      } else {
-        setOffset(200); // Set the default offset value if the screen width is 576px or more
-      }
-    };
+  const [slidesPerView, setSlidesPerView] = useState(1); // Default slides per view value
+  const [spaceBetween, setSpaceBetween] = useState(20); // Default space between slides value
 
-    // Initial update
-    updateOffset();
-    // Add a resize event listener to update the offset on window resize
-    window.addEventListener("resize", updateOffset);
+  // Rendering the category based on toggle button
+  const [isActiveCategory, setActiveCategory] = useState("webDev");
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", updateOffset);
-    };
-  }, []); // Run this effect only once when the component mounts
   return (
     <Element name="projects" id="Projects">
       <section className="persnalProjects">
-      <div className="main_container md:py-[100px] py-[50px]">
-        <h1 className="fz-64 text-[#b91813] text-center">Personal Projects</h1>
-        <div className="content_container">
-          <div className="pt-[50px]">
-            <ProjectCarousel
-              cards={cards}
-              height="500px"
-              width="100%"
-              margin="auto"
-              offset={offset}
-              showArrows={true}
-            />
+        <div className="outer_container md:pt-0 md:pb-20 py-[50px]">
+          <h1 className="fz-64 text-[#b91813] text-center">
+            Personal Projects
+          </h1>
+          <div className="content_container">
+            <div className="pt-[50px]">
+              <div className="toggleButton flex justify-center">
+                <CustomToggleButton setToggle={setActiveCategory} />
+              </div>
+              {isActiveCategory == "webDev" ? (
+                <Carousel
+                  slideItems={slideItems}
+                  slidesPerView={slidesPerView}
+                  spaceBetween={spaceBetween}
+                />
+              ) : (
+                <p className="text-body-color text-center py-8">
+                  Graphic Design projects go here...
+                </p>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </Element>
   );
 }

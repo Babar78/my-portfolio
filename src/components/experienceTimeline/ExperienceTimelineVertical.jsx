@@ -33,7 +33,7 @@ function ExperienceTimelineVertical({
           </div>
         </div>
         <div
-          className={`w-[20px] rounded-full  absolute z-[100]  ${
+          className={`w-[20px] rounded-full  absolute -z-1  ${
             position === "center"
               ? "left-[50%] h-[450px] bg-gray-500"
               : position === "top-center"
