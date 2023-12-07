@@ -13,7 +13,7 @@ import bootstrapIcon from "../../assets/images/personalProjects/technologies/boo
 import tailwindIcon from "../../assets/images/personalProjects/technologies/tailwind.svg";
 import mysqlIcon from "../../assets/images/personalProjects/technologies/mysql.svg";
 
-function ProjectCard2({
+function WebDevProjectCard({
   projectLogo,
   projectTitle,
   techStack,
@@ -59,7 +59,10 @@ function ProjectCard2({
             <p className="font-bold text-[16px] text-[#A6A6A6]">{company}</p>
           </div>
         </div>
-        <p className="mt-[25px] text-[14px] text-gray-400" style={{ whiteSpace: 'pre-line' }}>
+        <p
+          className="mt-[25px] text-[14px] text-gray-400"
+          style={{ whiteSpace: "pre-line" }}
+        >
           {projectDescription}
         </p>
       </div>
@@ -97,4 +100,4 @@ function ProjectCard2({
   );
 }
 
-export default ProjectCard2;
+export default WebDevProjectCard;

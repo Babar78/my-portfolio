@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
-import ProjectCard from "../../components/projectCard2/ProjectCard2";
+import React, { useState } from "react";
+import WebDevProjectCard from "../../components/webDevProjectCard/WebDevProjectCard";
+import GraphicDesignProjectCard from "../../components/graphicDesignProjectCard/GraphicDesignProjectCard";
 
 // Importing Images
 import projectLogo1 from "../../assets/images/personalProjects/ff.svg";
@@ -17,7 +17,7 @@ import { Element } from "react-scroll";
 import CustomToggleButton from "../../components/customToggleButton/CustomToggleButton";
 import Carousel from "../../components/swiperJS/SwiperJS";
 
-const personalProjects = [
+const webDevProjects = [
   {
     id: 1,
     projectLogo: projectLogo3,
@@ -101,10 +101,10 @@ const personalProjects = [
 ];
 
 function PersonalProjects() {
-  const slideItems = personalProjects.map((project) => ({
+  const slideItems = webDevProjects.map((project) => ({
     id: project.id,
     content: (
-      <ProjectCard
+      <WebDevProjectCard
         projectLogo={project.projectLogo}
         projectTitle={project.projectTitle}
         techStack={project.techStack}
@@ -142,9 +142,7 @@ function PersonalProjects() {
                   spaceBetween={spaceBetween}
                 />
               ) : (
-                <p className="text-body-color text-center py-8">
-                  Graphic Design projects go here...
-                </p>
+                <GraphicDesignProjectCard />
               )}
             </div>
           </div>
