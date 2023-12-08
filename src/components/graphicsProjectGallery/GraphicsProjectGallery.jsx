@@ -2,7 +2,7 @@ import React from "react";
 
 function GraphicsProjectGallery() {
   return (
-    <div className="w-full max-w-[1170px] m-auto">
+    <div className="w-full max-w-[1170px] m-auto min-h-[500px] max-h-[600px] mt-16 overflow-auto">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique
       error provident blanditiis delectus odit, ea fugit minus optio atque,
       repellat rem, quod labore impedit! Sit illo ad quia provident. Lorem ipsum

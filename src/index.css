@@ -702,22 +702,7 @@ a {
 
 /* Personal Project Container */
 .persnalProjects .outer_container {
-  height: calc(100dvh - 200px) !important;
-}
-
-.persnalProjects .outer_container {
-  display: flex;
-  flex-direction: column;
-}
-
-.persnalProjects .content_container {
-  flex: 1;
-  position: relative;
-}
-.persnalProjects .content_container .graphicProjectGalleryDiv {
-  overflow-y: auto;
-  height: calc(100% - 50px);
-  margin-top: 25px !important;
+  min-height: calc(100dvh - 200px) !important;
 }
 /* Services Section Container */
 @media (max-width: 576px) {
