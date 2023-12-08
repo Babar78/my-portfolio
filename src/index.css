@@ -704,6 +704,11 @@ a {
 .persnalProjects .outer_container {
   min-height: calc(100dvh - 200px) !important;
 }
+
+#selectgraphicProjectCategory {
+  color: white !important;
+}
+
 /* Services Section Container */
 @media (max-width: 576px) {
   .servicesSection .main_container {
@@ -712,4 +717,25 @@ a {
   .testimonialSection .main_container {
     height: calc(100vh - 180px) !important;
   }
+}
+
+/* Mansory Grid Item Customization */
+.textDetailDiv {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+  padding: 10px;
+  border-radius: 0px 0px 4px 4px;
+  transition: 0.3s ease-out;
+}
+
+.pictureItem:hover .textDetailDiv {
+  opacity: 1;
+  height: 50px;
+  transition: opacity height inset 0.3s ease-out;
+}
+
+.MuiMasonry-root{
+  padding: 0px !important;
+  width: auto !important;
 }
