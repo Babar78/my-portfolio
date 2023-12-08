@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WebDevProjectCard from "../../components/webDevProjectCard/WebDevProjectCard";
-import GraphicDesignProjectCard from "../../components/graphicDesignProjectCard/GraphicDesignProjectCard";
+import GraphicsProjectGallery from "../../components/graphicsProjectGallery/GraphicsProjectGallery";
 
 // Importing Images
 import projectLogo1 from "../../assets/images/personalProjects/ff.svg";
@@ -126,25 +126,29 @@ function PersonalProjects() {
   return (
     <Element name="projects" id="Projects">
       <section className="persnalProjects">
-        <div className="outer_container md:pt-0 md:pb-20 py-[50px]">
+        <div className="outer_container md:py-0 py-[50px]">
           <h1 className="fz-64 text-[#b91813] text-center">
             Personal Projects
           </h1>
+          <div className="pt-[50px]">
+            <div className="toggleButton flex justify-center">
+              <CustomToggleButton setToggle={setActiveCategory} />
+            </div>
+          </div>
           <div className="content_container">
-            <div className="pt-[50px]">
-              <div className="toggleButton flex justify-center">
-                <CustomToggleButton setToggle={setActiveCategory} />
-              </div>
-              {isActiveCategory == "webDev" ? (
+            {isActiveCategory == "webDev" ? (
+              <div>
                 <Carousel
                   slideItems={slideItems}
                   slidesPerView={slidesPerView}
                   spaceBetween={spaceBetween}
                 />
-              ) : (
-                <GraphicDesignProjectCard />
-              )}
-            </div>
+              </div>
+            ) : (
+              <div className="graphicProjectGalleryDiv">
+                <GraphicsProjectGallery />
+              </div>
+            )}
           </div>
         </div>
       </section>

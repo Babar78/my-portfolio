@@ -30,7 +30,7 @@ const services = [
     description:
       "Graphics design expert, creating captivating visuals that leave a lasting impression. Elevate your brand with my impactful solutions.",
     image: serviceImage3,
-  }
+  },
 ];
 
 function ServicesSection() {

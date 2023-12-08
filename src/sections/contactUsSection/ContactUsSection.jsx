@@ -90,7 +90,7 @@ function ContactUsSection() {
   return (
     <Element name="contact" id="Contact">
       <section className="contactUsSection">
-        <div className="md:py-[100px] py-[50px]">
+        <div className="md:py-[100px] sm:py-[50px] pt-[50px] pb-[100px]">
           <div className="content_container">
             <div className="flex gap-20 justify-center">
               <div className="p-10 w-[600px] bg-gradient-to-tl from-[#1e1e1e] to-black rounded-[10px] formDiv">

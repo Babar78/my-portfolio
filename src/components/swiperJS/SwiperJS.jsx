@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,18 +8,18 @@ import "swiper/css/pagination";
 import "./styles.css";
 
 // import required modules
-import { Autoplay, Pagination} from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
-function SwiperJS({ slideItems , slidesPerView, spaceBetween}) {
+function SwiperJS({ slideItems, slidesPerView, spaceBetween }) {
   return (
     <Swiper
       slidesPerView={slidesPerView}
       spaceBetween={spaceBetween}
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // }}
-      // loop={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
       pagination={{
         dynamicBullets: true,
         clickable: true,

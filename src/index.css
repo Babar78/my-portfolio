@@ -677,23 +677,54 @@ a {
 }
 
 /* Project Carousel New Cards Toggle Button Responsive */
-@media (max-width: 415px){
-  .projectsCategoryToggleButtonOption{
+@media (max-width: 415px) {
+  .projectsCategoryToggleButtonOption {
     font-size: 10px !important;
   }
 }
 
-/* Project Carousel New Cards Tech Stack Icons Responsive */
-@media (max-width:1200px){
-  .technologyStackImage{
+/* Web Project Carousel New Cards Tech Stack Icons Responsive */
+@media (max-width: 1200px) {
+  .technologyStackImage {
     max-height: 50px !important ;
   }
-}@media (max-width:991px){
-  .technologyStackImage{
+}
+@media (max-width: 991px) {
+  .technologyStackImage {
     max-height: 40px !important ;
   }
-}@media (max-width:768px){
-  .technologyStackImage{
+}
+@media (max-width: 768px) {
+  .technologyStackImage {
     max-height: 30px !important ;
+  }
+}
+
+/* Personal Project Container */
+.persnalProjects .outer_container {
+  height: calc(100dvh - 200px) !important;
+}
+
+.persnalProjects .outer_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.persnalProjects .content_container {
+  flex: 1;
+  position: relative;
+}
+.persnalProjects .content_container .graphicProjectGalleryDiv {
+  overflow-y: auto;
+  height: calc(100% - 50px);
+  margin-top: 25px !important;
+}
+/* Services Section Container */
+@media (max-width: 576px) {
+  .servicesSection .main_container {
+    height: calc(100vh - 180px) !important;
+  }
+  .testimonialSection .main_container {
+    height: calc(100vh - 180px) !important;
   }
 }
