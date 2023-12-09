@@ -735,7 +735,20 @@ a {
   transition: opacity height inset 0.3s ease-out;
 }
 
-.MuiMasonry-root{
+.MuiMasonry-root {
   padding: 0px !important;
   width: auto !important;
+}
+
+/* Custom Modal Glassmorphism */
+.customModal {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  max-width: 450px;
 }

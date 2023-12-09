@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WebDevProjectCard from "../../components/webDevProjectCard/WebDevProjectCard";
+import WebDevProjectCard from "../../components/webProjectCard/WebProjectCard";
 import GraphicsProjectGallery from "../../components/graphicsProjectGallery/GraphicsProjectGallery";
 
 // Importing Images
@@ -27,6 +27,9 @@ const webDevProjects = [
     projectDescription:
       "eCart is a sleek e-commerce platform offering a curated selection of clothing, shoes, and more. Built with React and Tailwind CSS, the user interface is modern and intuitive. Powered by Express.js and Node.js on the back-end, and utilizing MongoDB for data storage, eCart ensures a secure and efficient shopping experience. Explore and shop seamlessly with eCart - where style meets simplicity.",
     date: "Feb 27, 2023",
+    repositoryLink: "https://github.com/Babar78/eCart",
+    websiteLink: "",
+    repositoryStatus: "public",
   },
   {
     id: 2,
@@ -37,6 +40,9 @@ const webDevProjects = [
     projectDescription:
       "Tripify is a dynamic tourism website designed to cater to the needs of avid travelers. Crafted as a semester project, Tripify seamlessly blends form and function.\n\nThe front-end, developed with React and Tailwind CSS, offers an engaging and user-friendly interface. On the back-end, Express.js and Node.js work in tandem to ensure a robust system. MongoDB serves as the backbone, storing and managing data efficiently. Discover the world with ease using Tripify - where exploration meets innovation.",
     date: "Dec 27, 2023",
+    repositoryLink: "https://github.com/abdulmoiez876/Web-Engineering-Project",
+    websiteLink: "",
+    repositoryStatus: "public",
   },
   {
     id: 3,
@@ -47,6 +53,9 @@ const webDevProjects = [
     projectDescription:
       "Faisal Movers, a prominent player in Pakistan's transportation sector, stands as a flagship venture under the esteemed Faisal Group. Renowned for its extensive operations, Faisal Group extends its influence across diverse industries, including fertilizer division, urban and public transportation, logistics, KCS, and fertilization division.\n\nAs the designer of their website, I crafted a platform that not only represents Faisal Movers but also serves as a comprehensive source of information about the entire Faisal Group and its various subsidiaries. The website encapsulates the essence of Faisal Group's multifaceted presence, providing insights into its significant contributions across different sectors.",
     date: "Oct 27, 2023",
+    repositoryLink: "",
+    websiteLink: "https://faisalmoversgroup.com/",
+    repositoryStatus: "private",
   },
   {
     id: 4,
@@ -57,6 +66,9 @@ const webDevProjects = [
     projectDescription:
       "BDS is a US based company which provides specialized service to assists individuals in navigating and resolving their financial challenges through effective debt settlement strategies. I designed this website during my Internship at Bilty for a US based client.\n\nThe project involved the creation of a responsive website, characterized by a contemporary and user-friendly interface. Employing advanced technologies and innovative design, the platform not only enhances user experience but also serves as a comprehensive resource for individuals seeking professional assistance in managing and settling their debts.",
     date: "Oct 05, 2023",
+    repositoryLink: "",
+    websiteLink: "https://businessdebtsettlements.com/",
+    repositoryStatus: "private",
   },
   {
     id: 5,
@@ -67,6 +79,9 @@ const webDevProjects = [
     projectDescription:
       "Bilty US, a project executed for Bilty, introduces BILTY Dispatch—a dedicated solution for efficient truck dispatching within the U.S. logistics sector. This endeavor focuses on streamlining dispatch operations, optimizing fleet performance, and providing real-time visibility in the transportation industry.\n\nThe responsive website is a testament to successful design and implementation, featuring a contemporary and intuitive user interface. Leveraging cutting-edge technologies and creative design, the platform not only enhances user experience and engagement but also achieves seamless integration of multimedia content and dynamic elements, creating a captivating online presence for BILTY Dispatch.",
     date: "Sep 30, 2023",
+    repositoryLink: "",
+    websiteLink: "https://bilty.us/",
+    repositoryStatus: "private",
   },
   {
     id: 6,
@@ -77,6 +92,9 @@ const webDevProjects = [
     projectDescription:
       "Concierge, a project developed for Bilty, represents a startup endeavor with a vision to provide users with a more convenient solution for ride booking and related services. The project involved the successful design and implementation of a responsive website featuring a modern and intuitive user interface",
     date: "Jul 10, 2023",
+    repositoryLink: "",
+    websiteLink: "https://concierge.com.pk/",
+    repositoryStatus: "private",
   },
   {
     id: 7,
@@ -87,6 +105,9 @@ const webDevProjects = [
     projectDescription:
       "Jalwal, a project undertaken for Bilty, serves as a dynamic online platform for a Pakistan-based recruitment firm. \n\nSpecializing in talent acquisition, Jalwal required a responsive website with a modern and intuitive user interface. The project successfully achieved this goal by leveraging cutting-edge technologies and implementing creative design strategies to enhance user experience and engagement.",
     date: "Aug 09, 2023",
+    repositoryLink: "",
+    websiteLink: "https://jalwal.com/",
+    repositoryStatus: "private",
   },
   {
     id: 8,
@@ -97,6 +118,9 @@ const webDevProjects = [
     projectDescription:
       "Chitral Steel, a local shop based in Chitral, envisioned a modern online presence to showcase their products and facilitate customer engagement. The project, titled 'Chitral Steel,' involved the successful design and implementation of a responsive single-page website. Leveraging a tech stack comprising HTML, CSS, JavaScript, and Bootstrap, the website achieved a contemporary and intuitive user interface. By employing cutting-edge technologies and creative design strategies, the project enhanced user experience and engagement.",
     date: "Oct 31, 2023",
+    repositoryLink: "",
+    websiteLink: "https://steel.erponix.com/",
+    repositoryStatus: "private",
   },
 ];
 
@@ -112,6 +136,9 @@ function PersonalProjects() {
         company={project.company}
         projectDescription={project.projectDescription}
         date={project.date}
+        repositoryLink={project.repositoryLink}
+        websiteLink={project.websiteLink}
+        repositoryStatus={project.repositoryStatus}
       />
     ),
   }));
