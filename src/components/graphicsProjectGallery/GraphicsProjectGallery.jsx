@@ -2,7 +2,7 @@ import React from "react";
 import CustomDropDown from "../customDropDown/CustomDropDown";
 import MansoryPicturesGrid from "../mansoryPicturesGrid/MansoryPicturesGrid";
 
-import { imagesData } from "./data";
+import { SocialMeidaPostsData } from "./data";
 
 function GraphicsProjectGallery() {
   // Implement Filter Functionality
@@ -15,7 +15,7 @@ function GraphicsProjectGallery() {
       </div>
       <div className="min-h-[450px] max-h-[550px] mt-4 overflow-auto p-4 border-slate-500 border rounded-lg">
         <MansoryPicturesGrid
-          imagesData={imagesData}
+          imagesData={SocialMeidaPostsData}
           selectedImageCategory={filteredImages}
         />
       </div>

@@ -72,8 +72,6 @@ function MansoryPicturesGrid({ imagesData, selectedImageCategory }) {
         : imagesData.filter(
             (imageItem) => imageItem.category === selectedImageCategory
           );
-
-    console.log(filteredImageItems);
     setFilteredImagesData(filteredImageItems);
   }, [imagesData, selectedImageCategory]);
 

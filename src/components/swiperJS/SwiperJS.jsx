@@ -19,7 +19,7 @@ function SwiperJS({ slideItems, slidesPerView, spaceBetween }) {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      loop={true}
+      // loop={true}
       pagination={{
         dynamicBullets: true,
         clickable: true,

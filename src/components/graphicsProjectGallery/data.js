@@ -13,90 +13,88 @@ import img8 from "../../assets/images/services/graphicDesign.png";
 import img9 from "../../assets/images/services/graphicDesign.png";
 import img10 from "../../assets/images/services/graphicDesign.png";
 
-export const logos = {
-  nlc: nlcLogo,
-  bds: bdsLogo,
-  nfc: nfcLogo,
-};
+// Relative Path to Company Logos
+const companyLogos = require.context(
+  "../../assets/images/personalProjects/graphicsProjects/company-logos",
+  false, // set to false to not search subdirectories
+  /\.(jpg|jpeg|png|svg)$/ // specify the file extensions you want to include
+);
 
-export const imagesData = [
-  {
-    src: img1,
-    companyName: "Company A",
-    position: "Designer",
-    category: "Brandwall",
-    companyLogoImg: logos.nfc,
-  },
+// Extract compantLogo names from paths
+const companyLogoNames = companyLogos.keys().map((image) => {
+  const matches = image.match(/\/([^/]+)\.\w+$/); // Extracts the name between the last '/' and '.' in the filename
+  return matches ? matches[1] : null;
+});
 
-  {
-    src: img2,
-    companyName: "Company B",
-    position: "Designer",
-    category: "Merchandise",
-    companyLogoImg: logos.bds,
-  },
+// Create an object with logo names as keys and images as values
+const companyLogosList = companyLogoNames.reduce((acc, name, index) => {
+  if (name) {
+    acc[name] = companyLogos.keys()[index];
+  }
+  return acc;
+}, {});
 
-  {
-    src: img3,
-    companyName: "Company C",
-    position: "Designer",
-    category: "Merchandise",
-    companyLogoImg: logos.bds,
-  },
+// Relative Path to Social Media Posts of National Literaly Circle
+const nlcSocialMeidaPosts = require.context(
+  "../../assets/images/personalProjects/graphicsProjects/projectCategories/social_media_posts/nlc",
+  false, // set to false to not search subdirectories
+  /\.(jpg|jpeg|png|svg)$/ // specify the file extensions you want to include
+);
 
-  {
-    src: img4,
-    companyName: "Company D",
-    position: "Designer",
-    category: "Social Media Post",
-    companyLogoImg: logos.bds,
-  },
+// Import All Social Media Posts of National Literaly  Circle and store them in an array
+const nlcSocialMeidaPostsList = nlcSocialMeidaPosts
+  .keys()
+  .map((image) => nlcSocialMeidaPosts(image));
 
-  {
-    src: img5,
-    companyName: "Company E",
-    position: "Designer",
-    category: "Social Media Post",
-    companyLogoImg: logos.bds,
-  },
+// Relative Path to Social Media Posts of Total School Solutions
+const tssSocialMeidaPosts = require.context(
+  "../../assets/images/personalProjects/graphicsProjects/projectCategories/social_media_posts/tss",
+  false, // set to false to not search subdirectories
+  /\.(jpg|jpeg|png|svg)$/ // specify the file extensions you want to include
+);
 
-  {
-    src: img6,
-    companyName: "Company F",
-    position: "Designer",
-    category: "Logo Design",
-    companyLogoImg: logos.nlc,
-  },
+// Import All Social Media Posts of Total School Solutions and store them in an array
+const tssSocialMeidaPostsList = tssSocialMeidaPosts
+  .keys()
+  .map((image) => tssSocialMeidaPosts(image));
 
-  {
-    src: img7,
-    companyName: "Company G",
-    position: "Designer",
-    category: "Logo Design",
-    companyLogoImg: logos.nlc,
-  },
+// map the whole TSS Social Media Posts array to create an array of objects
+// const SocialMeidaPostsData = nlcSocialMeidaPostsList.map((image, index) => {
+//   return {
+//     key: index,
+//     src: image,
+//     companyName: "Total School Solutions",
+//     position: "Designer",
+//     category: "Social Media Post",
+//     companyLogoImg: companyLogos(companyLogosList["nlc"]),
+//   };
+// });
 
-  {
-    src: img8,
-    companyName: "Company H",
-    position: "Designer",
-    category: "Logo Design",
-    companyLogoImg: logos.nlc,
-  },
-
-  {
-    src: img9,
-    companyName: "Company I",
-    position: "Designer",
-    category: "Logo Design",
-    companyLogoImg: logos.nlc,
-  },
-
-  {
-    src: img10,
-    companyName: "Company J",
-    position: "Designer",
-    category: "Logo Design",
-    companyLogoImg: logos.nlc,
-  },
-];
+const SocialMeidaPostsData = [
+    ...nlcSocialMeidaPostsList,
+    ...tssSocialMeidaPostsList,
+  ].map((image, index) => {
+    let companyName, companyLogoName, companyPosition;
+  
+    // Check if the image is from NLC or TSS based on its inclusion in the arrays
+    if (nlcSocialMeidaPostsList.includes(image)) {
+      companyName = "National Literary Circle";
+      companyPosition = "Director Graphics";
+      companyLogoName = "nlc";
+    } else if (tssSocialMeidaPostsList.includes(image)) {
+      companyName = "Total School Solutions";
+      companyPosition = "Graphic Designer";
+      companyLogoName = "tss";
+    }
+  
+    return {
+      key: index,
+      src: image,
+      companyName,
+      position: companyPosition,
+      category: "Social Media Post",
+      companyLogoImg: companyLogos(companyLogosList[companyLogoName]),
+    };
+  });
+  
+  export { SocialMeidaPostsData };
