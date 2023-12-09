@@ -17,12 +17,12 @@ function CustomInput({ label, name, type, placeholder, value, onChange }) {
     <>
       <label
         htmlFor="input-group-1"
-        class="block mb-2 text-sm font-medium text-white"
+        className="block mb-2 text-sm font-medium text-white"
       >
         {label}
       </label>
-      <div class="relative mb-6">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+      <div className="relative mb-6">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
           {type === "email" ? (
             <EmailIcon
               className={`dark:text-gray-400 ${
@@ -42,7 +42,7 @@ function CustomInput({ label, name, type, placeholder, value, onChange }) {
           id={`input-${name}`}
           name={name}
           value={value}
-          class="bg-[#d9d9d91a] border-b-[1px] border-b-white text-white text-sm rounded-[5px] focus:border-b-[#b91813] focus:ring-0 focus:outline-none block w-full h-[50px] pl-12 p-2.5"
+          className="bg-[#d9d9d91a] border-b-[1px] border-b-white text-white text-sm rounded-[5px] focus:border-b-[#b91813] focus:ring-0 focus:outline-none block w-full h-[50px] pl-12 p-2.5"
           placeholder={placeholder}
           onChange={onChange}
           onFocus={handleFocus}

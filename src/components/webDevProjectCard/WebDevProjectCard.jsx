@@ -71,7 +71,7 @@ function WebDevProjectCard({
           <h4 className="text-gray-300">Technologies Used</h4>
           <div className="flex flex-wrap my-5 gap-8 items-center">
             {techStack.map((technology, index) => (
-              <div className="md:max-w-[150px]">
+              <div key={index} className="md:max-w-[150px]">
                 <img
                   key={index}
                   src={technologyIcons[technology]} // Use the mapped icon for each technology

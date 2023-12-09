@@ -103,6 +103,7 @@ const webDevProjects = [
 function PersonalProjects() {
   const slideItems = webDevProjects.map((project) => ({
     id: project.id,
+
     content: (
       <WebDevProjectCard
         projectLogo={project.projectLogo}
