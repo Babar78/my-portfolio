@@ -13,86 +13,107 @@ import img8 from "../../assets/images/services/graphicDesign.png";
 import img9 from "../../assets/images/services/graphicDesign.png";
 import img10 from "../../assets/images/services/graphicDesign.png";
 
+// Importing Logos
+import nlc from "../../assets/images/personalProjects/ff.svg";
+import bds from "../../assets/images/personalProjects/bds.svg";
+import nfc from "../../assets/images/personalProjects/bilty.svg";
+
 const imagesData = [
   {
     src: img1,
     companyName: "Company A",
     position: "Designer",
-    category: "Graphic Design",
+    category: "Brandwall",
+    companyLogoImg: nfc,
   },
 
   {
     src: img2,
     companyName: "Company B",
     position: "Designer",
-    category: "UI/UX Design",
+    category: "Merchandise",
+    companyLogoImg: bds,
   },
 
   {
     src: img3,
     companyName: "Company C",
     position: "Designer",
-    category: "Web Development",
+    category: "Merchandise",
+    companyLogoImg: bds,
   },
 
   {
     src: img4,
     companyName: "Company D",
     position: "Designer",
-    category: "Web Development",
+    category: "Social Media Post",
+    companyLogoImg: bds,
   },
 
   {
     src: img5,
     companyName: "Company E",
     position: "Designer",
-    category: "UI/UX Design",
+    category: "Social Media Post",
+    companyLogoImg: bds,
   },
 
   {
     src: img6,
     companyName: "Company F",
     position: "Designer",
-    category: "Graphic Design",
+    category: "Logo Design",
+    companyLogoImg: nlc,
   },
 
   {
     src: img7,
     companyName: "Company G",
     position: "Designer",
-    category: "Graphic Design",
+    category: "Logo Design",
+    companyLogoImg: nlc,
   },
 
   {
     src: img8,
     companyName: "Company H",
     position: "Designer",
-    category: "Graphic Design",
+    category: "Logo Design",
+    companyLogoImg: nlc,
   },
 
   {
     src: img9,
     companyName: "Company I",
     position: "Designer",
-    category: "Graphic Design",
+    category: "Logo Design",
+    companyLogoImg: nlc,
   },
 
   {
     src: img10,
     companyName: "Company J",
     position: "Designer",
-    category: "Graphic Design",
+    category: "Logo Design",
+    companyLogoImg: nlc,
   },
 ];
 
 function GraphicsProjectGallery() {
+  // Implement Filter Functionality
+  const [filteredImages, setFilteredImages] = React.useState("All Images");
+
   return (
     <div className="w-full max-w-[1170px] mt-5 m-auto px-[20px]">
       <div className="filterImagesButton flex justify-end">
-        <CustomDropDown />
+        <CustomDropDown setFilteredImages={setFilteredImages} />
       </div>
       <div className="min-h-[450px] max-h-[550px] mt-4 overflow-auto p-4 border-slate-500 border rounded-lg">
-        <MansoryPicturesGrid imagesData={imagesData} />
+        <MansoryPicturesGrid
+          imagesData={imagesData}
+          selectedImageCategory={filteredImages}
+        />
       </div>
     </div>
   );

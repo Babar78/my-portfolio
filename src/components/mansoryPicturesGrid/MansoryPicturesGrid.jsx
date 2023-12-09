@@ -29,43 +29,58 @@ const Item = styled(Paper)(({ theme, imgSrc }) => ({
   },
 }));
 
-function MansoryPicturesGrid({ imagesData }) {
+function MansoryPicturesGrid({ imagesData, selectedImageCategory }) {
   // Function to generate random heights with a minimum value
   const generateRandomHeight = (min) => {
     return Math.max(Math.floor(Math.random() * 120) + min, min);
   };
-
   const generateRandomHeights = (count, minHeight) => {
     return Array.from({ length: count }, () => generateRandomHeight(minHeight));
   };
-
   const heights = generateRandomHeights(imagesData.length, 150);
 
-//   Responsive breakpoints
-const [breakpointCols, setBreakpointCols] = React.useState(4);
+  //   Responsive breakpoints
+  const [breakpointCols, setBreakpointCols] = React.useState(4);
 
-React.useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => {
-        if (window.innerWidth >= 1280) {
+      if (window.innerWidth >= 1280) {
         setBreakpointCols(4);
-        } else if (window.innerWidth >= 960) {
+      } else if (window.innerWidth >= 960) {
         setBreakpointCols(3);
-        } else if (window.innerWidth >= 600) {
+      } else if (window.innerWidth >= 600) {
         setBreakpointCols(2);
-        } else {
+      } else {
         setBreakpointCols(1);
-        }
+      }
     };
 
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-}, []);
+  }, []);
+
+  //   Show Images based on the selected Category
+  const [filteredImagesData, setFilteredImagesData] = React.useState([]);
+
+  React.useEffect(() => {
+    // If selectedImageCategory is "All Images," set filtered data to all images
+    // Otherwise, filter images based on the selected category
+    const filteredImageItems =
+      selectedImageCategory === "All Images"
+        ? imagesData
+        : imagesData.filter(
+            (imageItem) => imageItem.category === selectedImageCategory
+          );
+
+    console.log(filteredImageItems);
+    setFilteredImagesData(filteredImageItems);
+  }, [imagesData, selectedImageCategory]);
 
   return (
     <Box>
       <Masonry columns={breakpointCols} spacing={2}>
-        {imagesData.map((imageItem, index) => (
+        {filteredImagesData.map((imageItem, index) => (
           <Item
             key={index}
             sx={{ height: heights[index], padding: "0 !important" }}
@@ -73,11 +88,20 @@ React.useEffect(() => {
             className="relative flex items-end pictureItem cursor-pointer"
           >
             <div className="textDetailDiv w-full flex items-center text-white bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[#0000001a]">
-              <div className="text-start">
-                <p className="text-[14px] m-0 p-0">{imageItem.companyName}</p>
-                <span className="text-[10px] m-0 p-0 text-slate-400">
-                  {imageItem.position}
-                </span>
+              <div className="flex gap-2 items-center">
+                <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full">
+                  <img
+                    src={imageItem.companyLogoImg}
+                    alt="company logo"
+                    className="w-[30px] h-[30px]"
+                  />
+                </div>
+                <div className="text-start">
+                  <p className="text-[14px] m-0 p-0">{imageItem.companyName}</p>
+                  <span className="text-[10px] m-0 p-0 text-slate-400">
+                    {imageItem.position}
+                  </span>
+                </div>
               </div>
             </div>
           </Item>
