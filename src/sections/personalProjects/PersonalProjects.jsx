@@ -3,14 +3,14 @@ import WebDevProjectCard from "../../components/webDevProjectCard/WebDevProjectC
 import GraphicsProjectGallery from "../../components/graphicsProjectGallery/GraphicsProjectGallery";
 
 // Importing Images
-import projectLogo1 from "../../assets/images/personalProjects/ff.svg";
-import projectLogo2 from "../../assets/images/personalProjects/bds.svg";
-import projectLogo3 from "../../assets/images/personalProjects/eCart.png";
-import projectLogo4 from "../../assets/images/personalProjects/tripify.png";
-import projectLogo5 from "../../assets/images/personalProjects/bilty.svg";
-import projectLogo6 from "../../assets/images/personalProjects/concierge.svg";
-import projectLogo7 from "../../assets/images/personalProjects/jalwal.svg";
-import projectLogo8 from "../../assets/images/personalProjects/chitral_steel.png";
+import projectLogo1 from "../../assets/images/personalProjects/webProjects/company-logos/ff.svg";
+import projectLogo2 from "../../assets/images/personalProjects/webProjects/company-logos/bds.svg";
+import projectLogo3 from "../../assets/images/personalProjects/webProjects/company-logos/eCart.png";
+import projectLogo4 from "../../assets/images/personalProjects/webProjects/company-logos/tripify.png";
+import projectLogo5 from "../../assets/images/personalProjects/webProjects/company-logos/bilty.svg";
+import projectLogo6 from "../../assets/images/personalProjects/webProjects/company-logos/concierge.svg";
+import projectLogo7 from "../../assets/images/personalProjects/webProjects/company-logos/jalwal.svg";
+import projectLogo8 from "../../assets/images/personalProjects/webProjects/company-logos/chitral_steel.png";
 
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";

@@ -32,12 +32,12 @@ const Item = styled(Paper)(({ theme, imgSrc }) => ({
 function MansoryPicturesGrid({ imagesData, selectedImageCategory }) {
   // Function to generate random heights with a minimum value
   const generateRandomHeight = (min) => {
-    return Math.max(Math.floor(Math.random() * 120) + min, min);
+    return Math.max(Math.floor(Math.random() * 100) + min, min);
   };
   const generateRandomHeights = (count, minHeight) => {
     return Array.from({ length: count }, () => generateRandomHeight(minHeight));
   };
-  const heights = generateRandomHeights(imagesData.length, 150);
+  const heights = generateRandomHeights(imagesData.length, 180);
 
   //   Responsive breakpoints
   const [breakpointCols, setBreakpointCols] = React.useState(4);
@@ -83,7 +83,7 @@ function MansoryPicturesGrid({ imagesData, selectedImageCategory }) {
             key={index}
             sx={{ height: heights[index], padding: "0 !important" }}
             imgSrc={imageItem.src}
-            className="relative flex items-end pictureItem cursor-pointer"
+            className="relative flex items-end pictureItem cursor-pointer object-center"
           >
             <div className="textDetailDiv w-full flex items-center text-white bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[#0000001a]">
               <div className="flex gap-2 items-center">

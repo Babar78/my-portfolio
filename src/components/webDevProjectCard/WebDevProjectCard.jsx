@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-import htmlIcon from "../../assets/images/personalProjects/technologies/html.svg";
-import cssIcon from "../../assets/images/personalProjects/technologies/css.svg";
-import jsIcon from "../../assets/images/personalProjects/technologies/js.svg";
-import reactIcon from "../../assets/images/personalProjects/technologies/react.svg";
-import nodeIcon from "../../assets/images/personalProjects/technologies/node.svg";
-import reduxIcon from "../../assets/images/personalProjects/technologies/redux.svg";
-import mongoIcon from "../../assets/images/personalProjects/technologies/mongo.svg";
-import cloudinaryIcon from "../../assets/images/personalProjects/technologies/cloudinary.svg";
-import bootstrapIcon from "../../assets/images/personalProjects/technologies/bootstrap.svg";
-import tailwindIcon from "../../assets/images/personalProjects/technologies/tailwind.svg";
-import mysqlIcon from "../../assets/images/personalProjects/technologies/mysql.svg";
+import htmlIcon from "../../assets/images/personalProjects/webProjects/technologies/html.svg";
+import cssIcon from "../../assets/images/personalProjects/webProjects/technologies/css.svg";
+import jsIcon from "../../assets/images/personalProjects/webProjects/technologies/js.svg";
+import reactIcon from "../../assets/images/personalProjects/webProjects/technologies/react.svg";
+import nodeIcon from "../../assets/images/personalProjects/webProjects/technologies/node.svg";
+import reduxIcon from "../../assets/images/personalProjects/webProjects/technologies/redux.svg";
+import mongoIcon from "../../assets/images/personalProjects/webProjects/technologies/mongo.svg";
+import cloudinaryIcon from "../../assets/images/personalProjects/webProjects/technologies/cloudinary.svg";
+import bootstrapIcon from "../../assets/images/personalProjects/webProjects/technologies/bootstrap.svg";
+import tailwindIcon from "../../assets/images/personalProjects/webProjects/technologies/tailwind.svg";
+import mysqlIcon from "../../assets/images/personalProjects/webProjects/technologies/mysql.svg";
 
 function WebDevProjectCard({
   projectLogo,
