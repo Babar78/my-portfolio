@@ -709,16 +709,6 @@ a {
   color: white !important;
 }
 
-/* Services Section Container */
-@media (max-width: 576px) {
-  .servicesSection .main_container {
-    height: calc(100vh - 180px) !important;
-  }
-  .testimonialSection .main_container {
-    height: calc(100vh - 180px) !important;
-  }
-}
-
 /* Mansory Grid Item Customization */
 .textDetailDiv {
   position: absolute;
