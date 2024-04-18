@@ -86,15 +86,16 @@ function ServicesSection() {
   return (
     <Element name="services" id="Services">
       <section className="servicesSection">
-        <div className="md:py-[100px] py-[50px]">
-          <div className="content_container">
-            <h1 className="fz-64 text-[#b91813] text-center md:mb-[100px] mb-[50px]">Services</h1>
+        <div className="content_container md:py-[50px] py-[0px] h-full">
+          <h1 className="fz-64 text-[#b91813] text-center md:mb-[50px] mb-[25px]">Services</h1>
+          <div className="services_carousel_outer_div">
             <Carousel
               slideItems={slideItems}
               slidesPerView={slidesPerView}
               spaceBetween={spaceBetween}
             />
           </div>
+
         </div>
       </section>
     </Element>
