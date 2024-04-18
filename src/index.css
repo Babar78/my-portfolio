@@ -701,9 +701,9 @@ a {
 }
 
 /* Personal Project Container */
-.persnalProjects .outer_container {
+/* .persnalProjects .outer_container {
   min-height: calc(100dvh - 200px) !important;
-}
+} */
 
 #selectgraphicProjectCategory {
   color: white !important;

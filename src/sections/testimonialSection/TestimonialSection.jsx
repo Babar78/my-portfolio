@@ -85,10 +85,10 @@ function TestimonialSection() {
   return (
     <Element name="testimonials" id="Testimonials">
       <section className="testimonialSection">
-        <div className="main_container py-[100px]">
+        <div className="md:py-[100px] py-[50px]">
           <div className="content_container">
             <h1 className="fz-64 text-center text-[#b91813]">Testimonials</h1>
-            <div className="h-full sm:py-[100px] py-[75px]">
+            <div className=" md:py-[100px] py-[50px] h-[600px]">
               <Carousel
                 slideItems={slideItems}
                 slidesPerView={slidesPerView}

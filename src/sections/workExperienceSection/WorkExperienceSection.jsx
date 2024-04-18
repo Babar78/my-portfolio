@@ -80,7 +80,7 @@ function WorkExperienceSection() {
   return (
     <Element name="workExperience" id="Work Experience">
       <section className="workExperienceSection">
-        <div className="w-screen md:h-screen h-[100%] md:pt-[100px] py-[50px]">
+        <div className="w-screen md:h-[800px] h-[100%] md:pt-[100px] py-[50px]">
           <h1 className="fz-64 text-[#b91813] text-center">Work Experience</h1>
           <div className="content_container md:flex hidden justify-center gap-5 items-center">
             <div className="w-[50%]">
