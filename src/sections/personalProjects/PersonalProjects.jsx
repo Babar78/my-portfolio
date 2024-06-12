@@ -11,6 +11,11 @@ import projectLogo5 from "../../assets/images/personalProjects/webProjects/compa
 import projectLogo6 from "../../assets/images/personalProjects/webProjects/company-logos/concierge.svg";
 import projectLogo7 from "../../assets/images/personalProjects/webProjects/company-logos/jalwal.svg";
 import projectLogo8 from "../../assets/images/personalProjects/webProjects/company-logos/chitral_steel.png";
+import projectLogo9 from "../../assets/images/personalProjects/webProjects/company-logos/bits.svg";
+import projectLogo10 from "../../assets/images/personalProjects/webProjects/company-logos/enigma.svg";
+import projectLogo11 from "../../assets/images/personalProjects/webProjects/company-logos/homyz.svg";
+import projectLogo12 from "../../assets/images/personalProjects/webProjects/company-logos/hilink.svg";
+import projectLogo13 from "../../assets/images/personalProjects/webProjects/company-logos/taskTrek.svg";
 
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";
@@ -20,6 +25,71 @@ import Carousel from "../../components/swiperJS/SwiperJS";
 const webDevProjects = [
   {
     id: 1,
+    projectLogo: projectLogo9,
+    projectTitle: "Blockchain Based Interbank Transaction System",
+    techStack: ["mongo","expressJs", "react", "node", "redux", "tailwind", "mui", "chartJs", "solidity"],
+    company: "FYP",
+    projectDescription:
+      "BITS (Blockchain Interbank Transaction Solution) is a blockchain-based platform designed to revolutionize cross-border money transfers. By leveraging blockchain technology, BITS addresses high costs, prolonged processing times, and lack of transparency in traditional banking. It offers seamless integration with existing systems and a user-friendly interface, ensuring secure, efficient, and transparent transactions. BITS caters to international students, expatriates, SMEs, and multinational corporations, providing faster, cheaper, and more reliable remittance services.",
+    date: "May 12, 2024",
+    repositoryLink: "#",
+    websiteLink: "#",
+    repositoryStatus: "private",
+  },
+  {
+    id: 2,
+    projectLogo: projectLogo10,
+    projectTitle: "Enigma",
+    techStack: ["react", "tailwind", "redux"],
+    company: "Freelance Project",
+    projectDescription:
+      "Enigma is developing a very unique proprietary hardware encryption platform along with a US provisional patent submission leveraging both artificial intelligence in the PKI distribution life cycle and blockchain to secure and manage the lifecycle of the product.",
+    date: "Apr 16, 2024",
+    repositoryLink: "",
+    websiteLink: "https://enigmakey.io/",
+    repositoryStatus: "private",
+  },
+  {
+    id: 3,
+    projectLogo: projectLogo11,
+    projectTitle: "Homyz",
+    techStack: ["mongo", "expressJs", "react", "node", "mui", "tailwind"],
+    company: "Semester Project",
+    projectDescription:
+      "A cutting-edge real estate platform that offers users a seamless experience to book property visits and explore potential homes. By integrating advanced search filters and virtual tours, it streamlines the home-buying process, making it easier for users to find their ideal property.",
+    date: "Mar 17, 2024",
+    repositoryLink: "",
+    websiteLink: "https://homyz-mern.vercel.app/",
+    repositoryStatus: "private",
+  },
+  {
+    id: 4,
+    projectLogo: projectLogo12,
+    projectTitle: "HiLink",
+    techStack: ["nextJS", "mongo", "tailwind", "mui"],
+    company: "Personal Project",
+    projectDescription:
+      "HiLink is an innovative camping travel app designed to ignite the spirit of adventure in every outdoor enthusiast. Developed using NEXT JS, it offers a seamless and intuitive frontend experience, bringing a world of camping destinations right to your fingertips.",
+    date: "Apr 02, 2024",
+    repositoryLink: "https://github.com/Babar78/Camping_Travel_app",
+    websiteLink: "https://camping-travel-app.vercel.app/",
+    repositoryStatus: "public",
+  },
+  {
+    id: 5,
+    projectLogo: projectLogo13,
+    projectTitle: "TaskTrek",
+    techStack: ["nextJS", "mongo", "tailwind", "mui", "chartJs"],
+    company: "Personal Project",
+    projectDescription:
+      "TaskTrek is a modern todo web app featuring a unique and contemporary design. It allows users to sign up and log in to manage their tasks efficiently. Users can add, edit, and delete tasks, all of which are securely stored in a MongoDB database. TaskTrek offers an intuitive interface, making task management seamless and enjoyable.",
+    date: "Apr 21, 2024",
+    repositoryLink: "https://github.com/Babar78/TODO_Web_App",
+    websiteLink: "",
+    repositoryStatus: "public",
+  },
+  {
+    id: 6,
     projectLogo: projectLogo3,
     projectTitle: "eCart",
     techStack: ["mongo", "react", "node", "redux", "cloudinary", "bootstrap"],
@@ -32,7 +102,7 @@ const webDevProjects = [
     repositoryStatus: "public",
   },
   {
-    id: 2,
+    id: 7,
     projectLogo: projectLogo4,
     projectTitle: "Tripify",
     techStack: ["mongo", "react", "node", "tailwind"],
@@ -45,7 +115,7 @@ const webDevProjects = [
     repositoryStatus: "public",
   },
   {
-    id: 3,
+    id: 8,
     projectLogo: projectLogo1,
     projectTitle: "Faisal Movers",
     techStack: ["html", "css", "js", "bootstrap"],
@@ -58,7 +128,7 @@ const webDevProjects = [
     repositoryStatus: "private",
   },
   {
-    id: 4,
+    id: 9,
     projectLogo: projectLogo2,
     projectTitle: "Business Debt Settelments",
     techStack: ["html", "css", "js", "bootstrap"],
@@ -71,7 +141,7 @@ const webDevProjects = [
     repositoryStatus: "private",
   },
   {
-    id: 5,
+    id: 10,
     projectLogo: projectLogo5,
     projectTitle: "Bilty Dispatch",
     techStack: ["html", "css", "js", "bootstrap"],
@@ -84,7 +154,7 @@ const webDevProjects = [
     repositoryStatus: "private",
   },
   {
-    id: 6,
+    id: 11,
     projectLogo: projectLogo6,
     projectTitle: "Concierge",
     techStack: ["html", "css", "js", "bootstrap"],
@@ -97,7 +167,7 @@ const webDevProjects = [
     repositoryStatus: "private",
   },
   {
-    id: 7,
+    id: 12,
     projectLogo: projectLogo7,
     projectTitle: "Jalwal",
     techStack: ["html", "css", "js", "bootstrap"],
@@ -110,7 +180,7 @@ const webDevProjects = [
     repositoryStatus: "private",
   },
   {
-    id: 8,
+    id: 13,
     projectLogo: projectLogo8,
     projectTitle: "Chitral Steel",
     techStack: ["html", "css", "js", "bootstrap"],

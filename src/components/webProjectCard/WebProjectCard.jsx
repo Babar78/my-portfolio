@@ -12,6 +12,11 @@ import cloudinaryIcon from "../../assets/images/personalProjects/webProjects/tec
 import bootstrapIcon from "../../assets/images/personalProjects/webProjects/technologies/bootstrap.svg";
 import tailwindIcon from "../../assets/images/personalProjects/webProjects/technologies/tailwind.svg";
 import mysqlIcon from "../../assets/images/personalProjects/webProjects/technologies/mysql.svg";
+import mui from "../../assets/images/personalProjects/webProjects/technologies/mui.svg";
+import expressJs from "../../assets/images/personalProjects/webProjects/technologies/express.svg";
+import solidity from "../../assets/images/personalProjects/webProjects/technologies/solidity.svg";
+import chartJs from "../../assets/images/personalProjects/webProjects/technologies/chartjs.svg";
+import nextJS from "../../assets/images/personalProjects/webProjects/technologies/nextJs.svg";
 import CustomModal from "../customModal/CustomModal";
 
 function WebProjectCard({
@@ -38,6 +43,11 @@ function WebProjectCard({
     bootstrap: bootstrapIcon,
     tailwind: tailwindIcon,
     mysql: mysqlIcon,
+    mui: mui,
+    expressJs: expressJs,
+    solidity: solidity,
+    chartJs: chartJs,
+    nextJS: nextJS,
   };
 
   // Modal State
