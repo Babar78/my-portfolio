@@ -49,7 +49,7 @@ function OverviewStats() {
         <div>
           <div className="stats__number">
             <h1 className="fz-48 sm:text-start text-center">
-              <CountUp start={0} end={100} duration={2.5} suffix="+">
+              <CountUp start={0} end={20} duration={2.5} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
                     <span ref={countUpRef} />
@@ -68,7 +68,7 @@ function OverviewStats() {
         <div>
           <div className="stats__number">
             <h1 className="fz-48 sm:text-start text-center">
-              <CountUp start={0} end={10} duration={2.5} suffix="+">
+              <CountUp start={0} end={5} duration={2.5} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
                     <span ref={countUpRef} />
