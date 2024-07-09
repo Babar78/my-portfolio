@@ -4,8 +4,6 @@ import HeroSectionText from "../../components/heroSectionText/HeroSectionText";
 import CustomButton from "../../components/customButton/CustomButton";
 import SocialMediaSidebar from "../../components/socialMediaSidebar/SocialMediaSidebar";
 
-import CVPDF from "../../assets/cvPDF/Resume_Muhammad_Babar.pdf";
-
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";
 
