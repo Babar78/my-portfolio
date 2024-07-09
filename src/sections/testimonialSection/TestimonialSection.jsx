@@ -3,7 +3,8 @@ import TestimonialCard from "../../components/testimonialCard/TestimonialCard";
 
 import Carousel from "../../components/swiperJS/SwiperJS";
 
-import BasharatZaman from "../../assets/images/testimonials/BasharatZaman.jpeg";
+// import BasharatZaman from "../../assets/images/testimonials/BasharatZaman.jpeg";
+import BasharatZaman from "../../assets/images/testimonials/boy-icon.png";
 import Rameen from "../../assets/images/testimonials/girl-icon.png";
 import Hamza from "../../assets/images/testimonials/boy-icon.png"
 
