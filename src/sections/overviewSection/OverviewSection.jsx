@@ -2,7 +2,7 @@ import React from "react";
 import CustomButton from "../../components/customButton/CustomButton";
 import OverviewStats from "../../components/overviewStats/OverviewStats";
 
-import CVPDF from "../../assets/cvPDF/Muhammad_Babar_CV.pdf";
+import CVPDF from "../../assets/cvPDF/Resume_Muhammad_Babar.pdf";
 
 // To Scroll to this Element on NavbarButton Click
 import { Element } from "react-scroll";

@@ -6,7 +6,7 @@ function CustomButton({ label, icon, downloadPdf, pdfFile }) {
   return downloadPdf ? (
     <a
       href={pdfFile}
-      download="Muhammad-Babar-CV"
+      download="Resume-Muhammad-Babar"
       target="_blank"
       rel="noreferrer"
       className="btn bg-[#b91813] text-white transition ease-in delay-150 duration-75 hover:text-black inline-flex items-center p-4 text-base"
