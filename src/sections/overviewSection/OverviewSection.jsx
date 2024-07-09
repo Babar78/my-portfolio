@@ -32,7 +32,6 @@ function OverviewSection() {
                 label={`Download My CV`}
                 icon={"download"}
                 downloadPdf={true}
-                pdfFile={CVPDF}
               />
             </div>
             <div

@@ -29,7 +29,6 @@ function HeroSection() {
                 label={`Download My CV`}
                 icon={"download"}
                 downloadPdf={true}
-                pdfFile={CVPDF}
               />
             </div>
             <SocialMediaSidebar />

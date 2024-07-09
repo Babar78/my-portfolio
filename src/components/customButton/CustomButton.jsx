@@ -3,9 +3,12 @@ import FileDownloadRoundedIcon from "@mui/icons-material/FileDownloadRounded";
 
 
 function CustomButton({ label, icon, downloadPdf, pdfFile }) {
+
+  const pdfUrl = `${process.env.PUBLIC_URL}/Resume_Muhammad_Babar.pdf`;
+
   return downloadPdf ? (
     <a
-      href={pdfFile}
+      href={pdfUrl}
       download="Resume_Muhammad_Babar.pdf"
       target="_blank"
       rel="noreferrer"
