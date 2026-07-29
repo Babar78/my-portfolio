@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://mbabar.dev",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "destination": "https://mbabar.dev",
       "permanent": true
