@@ -35,6 +35,8 @@ function FooterSection() {
             </div>
             <div className="social-handles-div flex gap-5">
               <a
+                title="LinkedIn"
+                rel="noreferrer"
                 href="https://www.linkedin.com/in/mbabarashraf/"
                 target="_blank"
                 className="w-[50px] h-[50px] border-[1px] border-white hover:bg-white rounded-full text-white hover:text-black flex justify-center items-center cursor-pointer"
@@ -51,6 +53,7 @@ function FooterSection() {
               <a
                 href="https://www.behance.net/muhammad_babar"
                 target="_blank"
+                rel="noreferrer"
                 className="w-[50px] h-[50px] border-[1px] border-white hover:bg-white rounded-full text-white hover:text-black flex justify-center items-center cursor-pointer"
               >
                 <svg
@@ -65,6 +68,7 @@ function FooterSection() {
               <a
                 href="https://dribbble.com/Babar_Ashraf"
                 target="_blank"
+                rel="noreferrer"
                 className="w-[50px] h-[50px] border-[1px] border-white hover:bg-white rounded-full text-white hover:text-black flex justify-center items-center cursor-pointer"
               >
                 <svg
@@ -80,6 +84,7 @@ function FooterSection() {
               <a
                 href="mailto:muhammadbabarashraf8@gmail.com"
                 target="_blank"
+                rel="noreferrer"
                 className="w-[50px] h-[50px] border-[1px] border-white hover:bg-white rounded-full text-white hover:text-black flex justify-center items-center cursor-pointer"
               >
                 <svg

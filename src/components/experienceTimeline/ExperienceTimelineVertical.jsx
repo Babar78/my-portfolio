@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 
 function ExperienceTimelineVertical({
   position,
@@ -15,10 +15,10 @@ function ExperienceTimelineVertical({
             position === "center"
               ? "left-[50%]"
               : position === "top-center"
-              ? "left-[57%] top-[-55%]"
-              : position === "bottom-left"
-              ? "sm:right-[54%] right-[52%] top-[-130%]"
-              : ""
+                ? "left-[57%] top-[-55%]"
+                : position === "bottom-left"
+                  ? "sm:right-[54%] right-[52%] top-[-130%]"
+                  : ""
           }`}
         >
           <div
@@ -37,10 +37,10 @@ function ExperienceTimelineVertical({
             position === "center"
               ? "left-[50%] h-[450px] bg-gray-500"
               : position === "top-center"
-              ? "left-[57%] top-[-55%] h-[125px] bg-gray-600"
-              : position === "bottom-left"
-              ? "left-[43%] top-[-130%] h-[125px] bg-gray-700"
-              : ""
+                ? "left-[57%] top-[-55%] h-[125px] bg-gray-600"
+                : position === "bottom-left"
+                  ? "left-[43%] top-[-130%] h-[125px] bg-gray-700"
+                  : ""
           }`}
         ></div>
       </div>

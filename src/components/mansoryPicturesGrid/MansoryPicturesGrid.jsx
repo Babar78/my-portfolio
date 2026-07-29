@@ -7,13 +7,6 @@ import Masonry from "@mui/lab/Masonry";
 import CustomImageZoomModal from "../customImageZoomModal/CustomImageZoomModal";
 
 const Item = styled(Paper)(({ theme, imgSrc }) => {
-  const [isSquare, setIsSquare] = React.useState(false);
-
-  const handleImageLoad = (event) => {
-    const img = event.target;
-    setIsSquare(img.width === img.height);
-  };
-
   return {
     position: "relative",
     background: `url(${imgSrc})`,
@@ -41,9 +34,9 @@ const Item = styled(Paper)(({ theme, imgSrc }) => {
     },
 
     "& img": {
-      width: isSquare ? "100%" : "auto", // 100% width if it's a square, otherwise auto
-      height: isSquare ? "100%" : "auto", // 100% height if it's a square, otherwise auto
-      objectFit: isSquare ? "cover" : "contain", // cover if it's a square, otherwise contain
+      width: "100%", // 100% width if it's a square, otherwise auto
+      height: "100%", // 100% height if it's a square, otherwise auto
+      objectFit: "cover", // cover if it's a square, otherwise contain
     },
   };
 });
@@ -89,7 +82,7 @@ function MansoryPicturesGrid({ imagesData, selectedImageCategory }) {
       selectedImageCategory === "All Images"
         ? imagesData
         : imagesData.filter(
-            (imageItem) => imageItem.category === selectedImageCategory
+            (imageItem) => imageItem.category === selectedImageCategory,
           );
     setFilteredImagesData(filteredImageItems);
   }, [imagesData, selectedImageCategory]);
@@ -123,8 +116,7 @@ function MansoryPicturesGrid({ imagesData, selectedImageCategory }) {
               sx={{ height: heights[index], padding: "0 !important" }}
               imgSrc={imageItem.src}
               className="relative flex items-end pictureItem cursor-pointer object-center"
-
-              onClick={()=> handleOpenImgZoomModal(imageItem.src)}
+              onClick={() => handleOpenImgZoomModal(imageItem.src)}
             >
               <div className="textDetailDiv w-full flex items-center text-white bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[#0000001a]">
                 <div className="flex gap-2 items-center">

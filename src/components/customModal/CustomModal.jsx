@@ -35,6 +35,7 @@ function CustomModal({ openModal, websiteLink, handleClose }) {
             <a
               href={websiteLink}
               target="_blank"
+              rel="noreferrer"
               className="text-[#b91813] text-[14px] bg-white p-2 rounded-md border border-[#b91813]"
             >
               Go to Live Website
