@@ -31,7 +31,7 @@ function LinearProgressBar({ label, percentage, startLoading }) {
     return () => {
       clearInterval(timer);
     };
-  }, [startLoading]); // Add startLoading to the dependency array
+  }, [startLoading, percentage]);
 
   return (
     <>

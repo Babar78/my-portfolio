@@ -215,8 +215,8 @@ function PersonalProjects() {
 
   //   Use States to save how many items to show on screen w.r.t screen size
 
-  const [slidesPerView, setSlidesPerView] = useState(1); // Default slides per view value
-  const [spaceBetween, setSpaceBetween] = useState(20); // Default space between slides value
+  const [slidesPerView] = useState(1); // Default slides per view value
+  const [spaceBetween] = useState(20); // Default space between slides value
 
   // Rendering the category based on toggle button
   const [isActiveCategory, setActiveCategory] = useState("webDev");
@@ -234,7 +234,7 @@ function PersonalProjects() {
             </div>
           </div>
           <div className="content_container">
-            {isActiveCategory == "webDev" ? (
+            {isActiveCategory === "webDev" ? (
               <div>
                 <Carousel
                   slideItems={slideItems}

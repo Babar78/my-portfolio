@@ -18,9 +18,6 @@ function ContactUsSection() {
   // Show BackDrop on Form Submission
   const [showBackDrop, setShowBackDrop] = useState(false);
 
-  // Show SnackBar on Form Submission
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
   // Snackbar state
   const [snackbarOpen, setSnackbarOpen] = React.useState(false);
 
@@ -62,7 +59,7 @@ function ContactUsSection() {
         "bartistry_contactUs_form",
         "contactUs_template",
         form.current,
-        "uL8SYgTiJR2LFJ1mz"
+        "uL8SYgTiJR2LFJ1mz",
       )
       .then(
         (result) => {
@@ -83,7 +80,7 @@ function ContactUsSection() {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
       );
   };
 
@@ -131,6 +128,7 @@ function ContactUsSection() {
               <div className="w-fit flex flex-col justify-between infoDiv">
                 <div className="location-Div">
                   <iframe
+                    title="NUST School of Electrical Engineering and Computer Science"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.5656634607326!2d72.99042607621642!3d33.64250211776163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df967686954da9%3A0x34436c99dba44537!2sNUST%20School%20of%20Electrical%20Engineering%20and%20Computer%20Science%20(NUST-SEECS)!5e0!3m2!1sen!2s!4v1698970470405!5m2!1sen!2s"
                     width="600"
                     height="450"

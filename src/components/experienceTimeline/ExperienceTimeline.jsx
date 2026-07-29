@@ -9,7 +9,7 @@ function ExperienceTimeline({
   jobDescription,
 }) {
   const [showDetail, setShowDetail] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
   const timeoutRef = useRef(null);
 
   const handleFocus = () => {

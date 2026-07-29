@@ -6,128 +6,114 @@
   justify-content: center;
   flex-direction: column;
   padding-right: 20px !important;
+}
 
-  .title {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
+.box .title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 
-    .block {
-      width: 0%;
-      height: inherit;
-      background: #b91813;
-      position: absolute;
-      animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-      display: flex;
-    }
+.box .title .block {
+  width: 0%;
+  height: inherit;
+  background: #b91813;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
 
-    .heading {
-      color: #fff;
-      -webkit-animation: mainFadeIn 2s forwards;
-      -o-animation: mainFadeIn 2s forwards;
-      animation: mainFadeIn 2s forwards;
-      animation-delay: 1.6s;
-      opacity: 0;
-      display: flex;
-      align-items: baseline;
-      position: relative;
-      font-size: 48px;
+.box .title .heading {
+  color: #fff;
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  font-size: 48px;
+}
 
-      .headingSpan {
-        width: 0px;
-        height: 0px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
+.box .title .heading .headingSpan {
+  width: 0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 
-        background: #b91813;
-        -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92)
-          forwards;
-        animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-        animation-delay: 2s;
-        margin-left: 5px;
-        margin-top: -10px;
-        position: absolute;
-        bottom: 10px;
-        right: -15px;
-      }
-    }
+  background: #b91813;
+  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 10px;
+  right: -15px;
+}
+
+@media (max-width: 768px) {
+  .box .title .heading {
+    font-size: 42px !important;
   }
-
-
-  @media (max-width: 768px) {
-    .title {
-      .heading {
-        font-size: 42px !important;
-      }
-    }
-    .role {
-      .para {
-        font-size: 10px !important;
-      }
-    }
+  .box .role .para {
+    font-size: 10px !important;
   }
-  @media (max-width: 576px) {
-    .title {
-      .heading {
-        font-size: 36px !important;
-      }
-    }
+}
+
+@media (max-width: 576px) {
+  .box .title .heading {
+    font-size: 36px !important;
   }
+}
 
-  @media (max-width: 480px) {
-    .title {
-      .heading {
-        font-size: 32px !important;
-      }
-    }
-    .role {
-      .para {
-        font-size: 08px !important;
-      }
-    }
+@media (max-width: 480px) {
+  .box .title .heading {
+    font-size: 32px !important;
   }
-  @media (max-width: 349px) {
-    .title {
-      .headingSpan {
-        right: auto;
-        left: 100px;
-      }
-    }
-    
+  .box .role .para {
+    font-size: 08px !important;
   }
+}
 
-
-  .role {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 30px;
-    margin-top: -10px;
-
-    .block {
-      width: 0%;
-      height: inherit;
-      background: #b91813;
-      position: absolute;
-      animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-      animation-delay: 2s;
-      display: flex;
-    }
-
-    .para {
-      animation: secFadeIn 2s forwards;
-      animation-delay: 3.2s;
-      opacity: 0;
-      color: #ffffff;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-    }
+@media (max-width: 349px) {
+  .box .title .headingSpan {
+    right: auto;
+    left: 100px;
   }
+}
+
+.box .role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: -10px;
+}
+
+.box .role .block {
+  width: 0%;
+  height: inherit;
+  background: #b91813;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  display: flex;
+}
+
+.box .role .para {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 @keyframes mainBlock {
