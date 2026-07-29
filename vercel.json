@@ -1,5 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "echo 'Skipping build: site permanently redirects to mbabar.dev'",
+  "outputDirectory": "public",
   "redirects": [
     {
       "source": "/:path*",
